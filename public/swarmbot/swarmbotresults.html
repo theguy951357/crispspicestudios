@@ -35,41 +35,10 @@
     <!-- !PAGE CONTENT! -->
     <div class="w3-main" >
 
-      <!-- Header -->
-      <header class="w3-container" style="padding-top:22px">
-        <h5><b><i class="fa fa-dashboard"></i> Swarmbot Results</b></h5>
-      </header>
-
-      
-
-      <div class="w3-panel">
-        <div class="w3-row-padding" style="margin:0 -16px">
-          
-          <div>
-            <h3>Tree Maps</h3>
-            <h5>Left click or, if on a phone, tap on a square to go down the tree. Right click or long press on a square to go back up the tree.</h5>
-            <br>
-            <h5>Monte Carlo</h5>
-            <br>
-            <div id="montecarlo_div" style="height: 20%;"></div>
-            <br>
-            <h5>Ant Colony</h5>
-            <br>
-            <div id="antcolony_div" style="height: 20%;"></div>
-            <br>
-            <h5>Firefly</h5>
-            <br>
-            <div id="firefly_div" style="height: 20%;"></div>
-            <br>
-            <h5>Cuckoo Bird</h5>
-            <br>
-            <div id="cuckoobird_div" style="height: 20%;"></div>
-          </div>
-        </div>
-      </div>
-      <hr>
+      <br><br><br>
       <div class="w3-container">
-        <h3>Win%</h3>
+        <h3 class="w3-center">Win%</h3>
+        <p class="w3-center">The swarmbot competes with the bots on <a href="https://www.eothello.com/">eOthello</a>. These Graphs show the percentage of wins against an opponent.</p>
         <p>Monte Carlo Agent</p>
         <div class="w3-grey">
           <div class="w3-container w3-center w3-padding w3-green" style="width:36%">36%</div>
@@ -77,22 +46,25 @@
 
         <p>Ant Colony</p>
         <div class="w3-grey">
-          <div class="w3-container w3-center w3-padding w3-orange" style="width:61%">61%</div>
+          <div class="w3-container w3-center w3-padding w3-green" style="width:61%">61%</div>
         </div>
 
         <p>Firefly</p>
         <div class="w3-grey">
-          <div class="w3-container w3-center w3-padding w3-blue" style="width:41%">41%</div>
+          <div class="w3-container w3-center w3-padding w3-green" style="width:41%">41%</div>
         </div>
 
         <p>Cuckoo Bird</p>
         <div class="w3-grey">
-          <div class="w3-container w3-center w3-padding w3-red" style="width:43%">43%</div>
+          <div class="w3-container w3-center w3-padding w3-green" style="width:43%">43%</div>
         </div>
       </div>
 
+      <br>
       <div class="w3-container">
-        <h3>Performance</h3>
+        <h3 class="w3-center">Performance</h3>
+        <br>
+        <p class="w3-center">These metrics were collected by timing how long it takes each swarm to perform 3000 dives in parallel. The Monte Carlo graph is the only one where you will see performance on one agent. The Ant Colony, Firefly, and Cuckoo Bird swarms are reliant on more than one agent, so there is no measurement for a single agent. One thing to note is that the Ant Colony graph is measured in hundredths of a second compared to the rest of the swarms performing at tenths of a second. Even two Ant Colony agents can outperform eight Monte Carlo agents.</p>
         <br>
         <div id="montecarlo_speed_div" style="height: 300px;"></div>
         <br>
@@ -102,6 +74,42 @@
         <br>
         <div id="cuckoobird_speed_div" style="height:300px;"></div>
       </div>
+
+      <div class="w3-panel">
+        <div class="w3-row-padding" style="margin:0 -16px">
+          
+          <div>
+            <h3 class="w3-center">Tree Maps</h3>
+            <p class="w3-center">Left click or, if on a phone, tap on a square to go down the tree. Right click or long press on a square to go back up the tree. The number before the dash is not significant to the gametree. The google charts API just needs a unique id to build the tree properly. After the dash represents the move being explored. These graphs show the behavior of how the different swarms explore a gametree. The squares that are green show a node that points towards more winning strategies. Red nodes point towards less winning strategies. If a graph starts with one node, that is a game where the agent plays second, so the first part of the tree was chosen by the opponenent.</p>
+            <br>
+            <h5>Monte Carlo</h5>
+            <br>
+            <p class="w3-center"> You can see in the Monte Carlo tree map that the colors are faded and get more defined as you travel down the tree. This shows a more random dispersement when searching the tree. Whether There was a win or a loss doesn't matter to the agent until the simulations are over and it is time to choose a move.</p>
+            <br>
+            <div id="montecarlo_div" style="height: 20%;"></div>
+            <br>
+            <h5>Ant Colony</h5>
+            <br>
+            <p class="w3-center">In the Ant Colony graph, we can see a targeted approch to searching the tree. The pheromone trails that the ants follow allow the swarm to favor the winning paths. Since there is still a probabilty of veering off the pheromone trail, the agents can still explore around the pheromone trail to find more wins.</p>
+            <br>
+            <div id="antcolony_div" style="height: 20%;"></div>
+            <br>
+            <h5>Firefly</h5>
+            <br>
+            <p class="w3-center">The Firefly graph shows a similar start to the Monte Carlo graph where the colors are faded showing a random dispersement. This is expected since the Firefly and Cuckoo Bird swarms start out in the same manner as the Monte Carlo agents. As the genetic algorithms start to mutate and favor agents that find more winning strategies, The colors get more defined at a quicker pace compared to the Monte Carlo.</p>
+            <br>
+            <div id="firefly_div" style="height: 20%;"></div>
+            <br>
+            <h5>Cuckoo Bird</h5>
+            <br>
+            <p class="w3-center">The Cuckoo Bird graph shows a similar exploration approch to the Firefly. Colors get more defined and targeted as the Genetic algorithms start favoring winning strategies.</p>
+            <br>
+            <div id="cuckoobird_div" style="height: 20%;"></div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      
       <br>
       <br>
       <br>
