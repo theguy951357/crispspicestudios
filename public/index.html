@@ -1,84 +1,237 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Crispspice Studios</title>
+<head>
+<title>Christopher Blaha</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="images/chrisheadshot1.jpeg">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="../css/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- update the version number as needed -->
+<script defer src="/__/firebase/9.13.0/firebase-app-compat.js"></script>
+<!-- include only the Firebase features as you need -->
+<script defer src="/__/firebase/9.13.0/firebase-auth-compat.js"></script>
+<script defer src="/__/firebase/9.13.0/firebase-database-compat.js"></script>
+<script defer src="/__/firebase/9.13.0/firebase-firestore-compat.js"></script>
+<script defer src="/__/firebase/9.13.0/firebase-functions-compat.js"></script>
+<script defer src="/__/firebase/9.13.0/firebase-messaging-compat.js"></script>
+<script defer src="/__/firebase/9.13.0/firebase-storage-compat.js"></script>
+<script defer src="/__/firebase/9.13.0/firebase-analytics-compat.js"></script>
+<script defer src="/__/firebase/9.13.0/firebase-remote-config-compat.js"></script>
+<script defer src="/__/firebase/9.13.0/firebase-performance-compat.js"></script>
+<!-- 
+  initialize the SDK after all desired features are loaded, set useEmulator to false
+  to avoid connecting the SDK to running emulators.
+-->
+<script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.13.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.13.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.13.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.13.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.13.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.13.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.13.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.13.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.13.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.13.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+</head>
+<body class="w3-black">
 
-    <style>
-      html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-    </style>
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="images/fulllogo_transparent.png" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>PROJECTS</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
 
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo">Chris Blaha</h1>
+    <p>Software Engineer.</p>
+    <img src="images/chriscyberpunk1.jpeg" alt="my headshot" class="w3-image" width="992" height="1108">
+  </header>
+
+  <!-- About Section -->
+    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+        <h2 class="w3-text-light-grey">About Me</h2>
+        <hr style="width:200px" class="w3-opacity">
+        <p>     I am a graduate from the University of North Carolina Asheville with a bachelors degree in computer science and a minor in music.
+            During my time there, I gained an interest in AI and conducted my research on swarm intelligence. My project titled "Swarmbot" 
+            utilizes swarm intelligence to navigate a Monte Carlo Tree Search with efficiency and intuition. These metaheuristics combined 
+            with genetic algorithms allow the swarm agents to grow in a way where survival of the fittest navigates the swarm towards the 
+            optimal goal. 
+        </p>
+        <p>
+            After graduation I jumped right into the workplace with a company called <a href="https://www.netmaker.io/" target="_blank">Netmaker</a>. 
+            There I aquired knowledge about the intracacies of networking and QA. I worked on learning Golang and honed my threading skills
+            with Terraform. I aquired skills with Docker, LXC containers, github workflows, building installers and linux systems. I deploy documentation
+            on the latest releases that come out with python sphinx and readthedocs.org. 
+        </p>
+        <p>
+                I also design the website for <a href="https://thetaxraven.com" target="_blank">The Tax Raven</a> and provide any websites for customers 
+            of The Tax Raven if they need an asthetic landing page to integrate with their CRM.
+        </p>
+
+        
+        <a href="files/ChristopherBlahaResume2023.docx">
+            <button class="w3-button w3-light-grey w3-padding-large w3-section">
+                <i class="fa fa-download"> Download Resume</i>
+            </button>
+        </a>
     
-  </head>
-  <body>
-    <div class="w3-center w3-padding-32">
-      
-      
-      
-      <a href="swarmbot/swarmbotresults.html"><img src="images/Wordmark-Computer-Science - RGB-blue.png"  class="w3-center" style="width:100%; height:fit-content;" alt="Crispspice Studios logo"></a>
+  <!-- End About Section -->
     </div>
+  
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-grey">My Projects</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <!-- Grid for photos -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-quarter w3-margin-bottom"></div>
+        <div class="w3-half w3-margin-bottom">
+            <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+              <li class="w3-dark-grey w3-xlarge w3-padding-32">Swarmbot</li>
+              <li class="w3-padding-16">
+               <img src="images/othello.gif" alt="Swarmbot playing othello" width="100%">
+              </li>
+              <li class="w3-padding-16">
+                <a href="https://github.com/theguy951357/swarmbot" target="_blank">Github Repo</a>
+              </li>
+              <li class="w3-padding-16">
+                <a href="swarmbot/swarmbotresults.html">Results</a>
+              </li>
+              <li class="w3-light-grey w3-padding-24">
+                <a href="files/BlahaChristopherSwarmbot.docx">
+                    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+                        <i class="fa fa-download"> Download Paper</i>
+                    </button>
+                </a>
+              </li>
+            </ul>
+        </div>
+        <div class="w3-third w3-margin-bottom"></div>
+    </div>
+
+    <div class="w3-row-padding" style="margin:0 -16px">
+
+        <div class="w3-half w3-margin-bottom">
+            <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+              <li class="w3-dark-grey w3-xlarge w3-padding-32">The Tax Raven</li>
+              <li class="w3-padding-16">
+                <iframe src="https://thetaxraven.com" width="100%" height="400">
+                </iframe>
+              </li>
+            </ul>
+        </div>
+
+        <div class="w3-half w3-margin-bottom">
+            <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+              <li class="w3-dark-grey w3-xlarge w3-padding-32">Lawn Commander Property Services</li>
+              <li class="w3-padding-16">
+                <iframe src="https://lawncommander-eee56--first-preview-qsa2jkqt.web.app" width="100%" height="400">
+                </iframe>
+              </li>
+            </ul>
+        </div>
+    <!-- End project grid -->
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contact Me</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Bellingham, MA</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: (203) 415-6873</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: crispspiceguitar@gmail.com</p>
+      <p><a href="https://www.linkedin.com/in/christopher-blaha-5210b6a9/" target="_blank"><i class="fa fa-linkedin fa-fw w3-text-white w3-xxlarge w3-margin-right"></i></a> Linkedln</p>
+    </div><br>
+  <!-- End Contact Section -->
+  </div>
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
     
+  <!-- End footer -->
+  </footer>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+<!-- END PAGE CONTENT -->
+</div>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const loadEl = document.querySelector('#load');
+      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      // // The Firebase SDK is initialized and available here!
+      //
+      // firebase.auth().onAuthStateChanged(user => { });
+      // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+      // firebase.firestore().doc('/foo/bar').get().then(() => { });
+      // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+      // firebase.messaging().requestPermission().then(() => { });
+      // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+      // firebase.analytics(); // call to activate
+      // firebase.analytics().logEvent('tutorial_completed');
+      // firebase.performance(); // call to activate
+      //
+      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+      try {
+        let app = firebase.app();
+        let features = [
+          'auth', 
+          'database', 
+          'firestore',
+          'functions',
+          'messaging', 
+          'storage', 
+          'analytics', 
+          'remoteConfig',
+          'performance',
+        ].filter(feature => typeof app[feature] === 'function');
+        loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+      } catch (e) {
+        console.error(e);
+        loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+      }
+    });
+  </script>
+
+</body>
 </html>
