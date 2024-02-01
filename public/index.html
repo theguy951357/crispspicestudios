@@ -4,10 +4,13 @@
 <title>Christopher Blaha</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="images/chrisheadshot1.jpeg">
+<link rel="icon" href="./images/chrisheadshot1.jpeg">
 <link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="./css/main.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 
 <!-- update the version number as needed -->
 <script defer src="/__/firebase/9.13.0/firebase-app-compat.js"></script>
@@ -39,6 +42,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </style>
 </head>
 <body class="w3-black">
+  
+  
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
@@ -85,7 +90,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
         <h2 class="w3-text-light-grey">About Me</h2>
         <hr style="width:200px" class="w3-opacity">
-        <p>     I am a graduate from the University of North Carolina Asheville with a bachelors degree in computer science and a minor in music.
+        <p id="unique-id">     I am a graduate from the University of North Carolina Asheville with a bachelors degree in computer science and a minor in music.
             During my time there, I gained an interest in AI and conducted my research on swarm intelligence. My project titled "Swarmbot" 
             utilizes swarm intelligence to navigate a Monte Carlo Tree Search with efficiency and intuition. These metaheuristics combined 
             with genetic algorithms allow the swarm agents to grow in a way where survival of the fittest navigates the swarm towards the 
@@ -239,6 +244,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- END PAGE CONTENT -->
 </div>
 
+<ul class="notifications" id="notifications"></ul>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="./scripts/lib/noframework.waypoints.min.js"></script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -278,6 +286,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       }
     });
   </script>
+  
+  
 
 </body>
 </html>
