@@ -1,3 +1,7 @@
+/*!
+The MIT License (MIT)
+Copyright (c) 2018 Martin Laxenaire
+*/
 /***
  Here we create a CallbackQueueManager class object
  This allows to store callbacks in a queue array with a timeout of 0 to be executed on next render call

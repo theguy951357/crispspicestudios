@@ -1,3 +1,7 @@
+/*!
+The MIT License (MIT)
+Copyright (c) 2018 Martin Laxenaire
+*/
 /***
  Throw a console warning with the passed arguments
  ***/

@@ -1,3 +1,7 @@
+/*!
+The MIT License (MIT)
+Copyright (c) 2018 Martin Laxenaire
+*/
 /***
  Here we create a ScrollManager class object
  This keeps track of our scroll position, scroll deltas and triggers an onScroll callback

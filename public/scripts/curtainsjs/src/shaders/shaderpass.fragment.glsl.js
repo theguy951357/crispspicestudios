@@ -1,3 +1,7 @@
+/*!
+The MIT License (MIT)
+Copyright (c) 2018 Martin Laxenaire
+*/
 import precisionMedium from './chunks/precision.medium.glsl.js';
 import defaultVaryings from './chunks/default.varyings.glsl.js';
 

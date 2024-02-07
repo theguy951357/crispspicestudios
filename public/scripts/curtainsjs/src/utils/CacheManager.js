@@ -1,3 +1,7 @@
+/*!
+The MIT License (MIT)
+Copyright (c) 2018 Martin Laxenaire
+*/
 /***
  Here we create a CacheManager class object
  This will store geometries attributes arrays, textures and WebGL programs in arrays
