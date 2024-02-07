@@ -1,3 +1,7 @@
+/*!
+The MIT License (MIT)
+Copyright (c) 2018 Martin Laxenaire
+*/
 import {Scene} from "./Scene.js";
 import {CacheManager} from "../utils/CacheManager.js";
 import {CallbackQueueManager} from "../utils/CallbackQueueManager.js";

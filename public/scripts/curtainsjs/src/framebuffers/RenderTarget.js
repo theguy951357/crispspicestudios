@@ -1,3 +1,7 @@
+/*!
+The MIT License (MIT)
+Copyright (c) 2018 Martin Laxenaire
+*/
 import {Texture} from '../core/Texture.js';
 import {generateUUID, throwError, throwWarning} from '../utils/utils.js';
 

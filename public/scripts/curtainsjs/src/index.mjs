@@ -1,3 +1,7 @@
+/*!
+The MIT License (MIT)
+Copyright (c) 2018 Martin Laxenaire
+*/
 // core
 export {Curtains} from './core/Curtains.js';
 export {Plane} from './core/Plane.js';

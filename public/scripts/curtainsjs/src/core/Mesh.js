@@ -1,3 +1,7 @@
+/*!
+The MIT License (MIT)
+Copyright (c) 2018 Martin Laxenaire
+*/
 import {Program} from './Program.js';
 import {Geometry} from './Geometry.js';
 import {Texture} from './Texture.js';

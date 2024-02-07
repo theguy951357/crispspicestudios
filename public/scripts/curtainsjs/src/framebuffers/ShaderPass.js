@@ -1,3 +1,7 @@
+/*!
+The MIT License (MIT)
+Copyright (c) 2018 Martin Laxenaire
+*/
 import {DOMMesh} from "../core/DOMMesh.js";
 import {RenderTarget} from './RenderTarget.js';
 import {Texture} from '../core/Texture.js';

@@ -1,3 +1,7 @@
+/*!
+The MIT License (MIT)
+Copyright (c) 2018 Martin Laxenaire
+*/
 import {Mesh} from './Mesh.js';
 import {Vec2} from '../math/Vec2.js';
 import {throwWarning} from '../utils/utils.js';

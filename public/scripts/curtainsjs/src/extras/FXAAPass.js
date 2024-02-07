@@ -1,3 +1,7 @@
+/*!
+The MIT License (MIT)
+Copyright (c) 2018 Martin Laxenaire
+*/
 import {ShaderPass} from "../framebuffers/ShaderPass.js";
 
 /*** FXAAPASS CLASS ***/

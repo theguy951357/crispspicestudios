@@ -1,3 +1,7 @@
+/*!
+The MIT License (MIT)
+Copyright (c) 2018 Martin Laxenaire
+*/
 import {Renderer} from "./Renderer.js";
 import {ScrollManager} from "../utils/ScrollManager.js";
 import {throwWarning, lerp} from "../utils/utils.js";

@@ -1,3 +1,7 @@
+/*!
+The MIT License (MIT)
+Copyright (c) 2018 Martin Laxenaire
+*/
 import {Mat4} from '../math/Mat4.js';
 import {Vec2} from '../math/Vec2.js';
 import {Vec3} from '../math/Vec3.js';

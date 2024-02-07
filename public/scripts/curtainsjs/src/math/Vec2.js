@@ -1,3 +1,7 @@
+/*!
+The MIT License (MIT)
+Copyright (c) 2018 Martin Laxenaire
+*/
 /***
  Here we create a Vec2 class object
  This is a really basic Vector2 class used for vector calculations

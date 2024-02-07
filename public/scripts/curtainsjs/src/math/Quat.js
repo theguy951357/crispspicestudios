@@ -1,3 +1,7 @@
+/*!
+The MIT License (MIT)
+Copyright (c) 2018 Martin Laxenaire
+*/
 /***
  Here we create a Quat class object
  This is a really basic Quaternion class used for rotation calculations

@@ -1,3 +1,7 @@
+/*!
+The MIT License (MIT)
+Copyright (c) 2018 Martin Laxenaire
+*/
 import {Uniforms} from './Uniforms.js';
 import {throwError, throwWarning} from '../utils/utils.js';
 

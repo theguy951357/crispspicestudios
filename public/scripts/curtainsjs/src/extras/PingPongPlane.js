@@ -1,3 +1,7 @@
+/*!
+The MIT License (MIT)
+Copyright (c) 2018 Martin Laxenaire
+*/
 import {Plane} from "../core/Plane.js";
 import {RenderTarget} from "../framebuffers/RenderTarget.js";
 

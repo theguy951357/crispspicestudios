@@ -1,3 +1,7 @@
+/*!
+The MIT License (MIT)
+Copyright (c) 2018 Martin Laxenaire
+*/
 import {DOMMesh} from "./DOMMesh.js";
 import {Camera} from "../camera/Camera.js";
 import {Mat4} from '../math/Mat4.js';

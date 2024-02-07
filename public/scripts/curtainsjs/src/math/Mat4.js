@@ -1,3 +1,7 @@
+/*!
+The MIT License (MIT)
+Copyright (c) 2018 Martin Laxenaire
+*/
 /***
  Here we create a Mat4 class object
  This is a really basic Matrix4 class used for matrix calculations
