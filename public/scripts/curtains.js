@@ -1,11 +1,5 @@
-/*!
-The MIT License (MIT)
-Copyright (c) 2018 Martin Laxenaire
-*/
-
-
-
 import {Curtains, Plane} from "https://cdn.jsdelivr.net/npm/curtainsjs@8.1.5/src/index.mjs";
+
 // wait for everything to be ready
 window.addEventListener("load", () => {
 // set up our WebGL context and append the canvas to our wrapper
