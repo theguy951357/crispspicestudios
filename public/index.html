@@ -86,10 +86,22 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <header class="w3-container w3-padding-32 w3-center w3-2021-inkwell"  id="home">
     <h1 class="w3-jumbo w3-animate-left">Chris Blaha</h1>
     <p class="w3-animate-right">Software Engineer.</p>
-    <div id="canvas"></div>
-    <div class="plane">
+    <!-- <div id="canvas"></div> -->
+    <!-- <div class="plane">
       <img src="./images/chriscyberpunk1.jpeg" alt="my cyberpunk headshot" class="w3-image" width="992" height="1108">
-    </div>
+    </div> -->
+
+    <div id="page-wrap">
+
+			<div id="canvas"></div>
+
+			<div class="flex-wrapper multi-textures">
+				<!-- notice here we are using the data-sampler attribute to name our displacement sampler uniform -->
+				<img src="./images/displacement.jpg" crossorigin="" data-sampler="displacement" />
+				<img src="./images/chrisheadshot1.jpeg" crossorigin="" />
+				<img src="./images/chriscyberpunk1.jpeg" crossorigin="" />
+			</div>
+		</div>
 
   </header>
 
@@ -261,7 +273,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <ul class="notifications" id="notifications"></ul>
 <!-- vertex shader -->
-<script id="plane-vs" type="x-shader/x-vertex">
+<!-- <script id="plane-vs" type="x-shader/x-vertex">
   precision mediump float;
   // those are the mandatory attributes that the lib sets
   attribute vec3 aVertexPosition;
@@ -282,9 +294,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   vTextureCoord = (uTextureMatrix0 * vec4(aTextureCoord, 0.0, 1.0)).xy;
   vVertexPosition = vertexPosition;
   }
-  </script>
+  </script>-->
   <!-- fragment shader -->
-  <script id="plane-fs" type="x-shader/x-fragment">
+  <!--<script id="plane-fs" type="x-shader/x-fragment">
   precision mediump float;
   // get our varyings
   varying vec3 vVertexPosition;
@@ -302,7 +314,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   // map our texture with the texture matrix coords
   gl_FragColor = texture2D(uSampler0, textureCoord);
   }
-  </script>
+  </script> -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="./scripts/waypoints/lib/noframework.waypoints.min.js"></script>
