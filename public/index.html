@@ -4,10 +4,15 @@
 <title>Christopher Blaha</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="images/chrisheadshot1.jpeg">
-<link rel="stylesheet" href="css/w3.css">
+<link rel="icon" href="./images/chrisheadshot1.jpeg">
+<link rel="stylesheet" href="./css/w3.css">
+<link rel="stylesheet" href="./css/main.css">
+<link rel="stylesheet" href="./css/curtains.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
+<script src="./scripts/w3.js"></script>
+
 
 <!-- update the version number as needed -->
 <script defer src="/__/firebase/9.13.0/firebase-app-compat.js"></script>
@@ -31,20 +36,22 @@
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
 /* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
+.w3-sidebar {width: 120px;background: #EFE1CE;}
 /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
 #main {margin-left: 120px}
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
 </style>
 </head>
-<body class="w3-black">
+<body class="w3-2021-inkwell">
+  
+  
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
   <img src="images/fulllogo_transparent.png" style="width:100%">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+  <!-- <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
@@ -59,48 +66,68 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-envelope w3-xxlarge"></i>
     <p>CONTACT</p>
-  </a>
+  </a> -->
 </nav>
 
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+    <img class="w3-bar-item w3-button" src="images/fulllogo_transparent.png" style="width:15% !important">
+    <a href="#" class="w3-bar-item w3-button" style="width:20% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:20% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:20% !important">PROJECTS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:20% !important">CONTACT</a>
   </div>
 </div>
 
 <!-- Page Content -->
 <div class="w3-padding-large" id="main">
   <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo">Chris Blaha</h1>
-    <p>Software Engineer.</p>
-    <img src="images/chriscyberpunk1.jpeg" alt="my cyberpunk headshot" class="w3-image" width="992" height="1108">
+  <header class="w3-container w3-padding-32 w3-center w3-2021-inkwell"  id="home">
+    <div id="page-wrap">
+
+			<div id="canvas"></div>
+
+			<div class="flex-wrapper multi-textures">
+				<!-- notice here we are using the data-sampler attribute to name our displacement sampler uniform -->
+				<img src="./images/displacement.jpg" crossorigin="" data-sampler="displacement" />
+				<img src="./images/chrisheadshot1.jpeg" crossorigin="" />
+				<img src="./images/chriscyberpunk1.jpeg" crossorigin="" />
+			</div>
+		</div>
+    <h1 class="w3-jumbo w3-animate-left" style="z-index: 20;">Chris Blaha</h1>
+    <p class="w3-animate-right" style="z-index: 20;">Software Engineer.</p>
+
   </header>
 
   <!-- About Section -->
-    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <div class="w3-content w3-justify w3-text-white w3-padding-64" id="about">
         <h2 class="w3-text-light-grey">About Me</h2>
         <hr style="width:200px" class="w3-opacity">
-        <p>     I am a graduate from the University of North Carolina Asheville with a bachelors degree in computer science and a minor in music.
-            During my time there, I gained an interest in AI and conducted my research on swarm intelligence. My project titled "Swarmbot" 
-            utilizes swarm intelligence to navigate a Monte Carlo Tree Search with efficiency and intuition. These metaheuristics combined 
-            with genetic algorithms allow the swarm agents to grow in a way where survival of the fittest navigates the swarm towards the 
-            optimal goal. 
-        </p>
-        <p>
-            After graduation I jumped right into the workplace with a company called <a href="https://www.netmaker.io/" target="_blank">Netmaker</a>. 
-            There I aquired knowledge about the intracacies of networking and QA. I worked on learning Golang and honed my threading skills
-            with Terraform. I aquired skills with Docker, LXC containers, github workflows, building installers and linux systems. I deploy documentation
-            on the latest releases that come out with python sphinx and readthedocs.org. 
-        </p>
-        <p>
-                I also design the website for <a href="https://thetaxraven.com" target="_blank">The Tax Raven</a> and provide any websites for customers 
-            of The Tax Raven if they need an asthetic landing page to integrate with their CRM.
-        </p>
+        <div id="unique-id" class="w3-2021-buttercream w3-card-4 w3-padding w3-margin-bottom w3-round-medium" style="display: none;">
+          <p>     I am a graduate from the University of North Carolina Asheville with a bachelors degree in computer science and a minor in music.
+              During my time there, I gained an interest in AI and conducted my research on swarm intelligence. My project titled "Swarmbot" 
+              utilizes swarm intelligence to navigate a Monte Carlo Tree Search with efficiency and intuition. These metaheuristics combined 
+              with genetic algorithms allow the swarm agents to grow in a way where survival of the fittest navigates the swarm towards the 
+              optimal goal. The project is listed below with a link to the UNCA journal of undergraduate research entry and results from the
+              project.
+          </p>
+        </div> 
+        <div id="unique-id2" class="w3-2021-desert-mist w3-card-4 w3-padding w3-margin-bottom w3-round-medium" style="display: none;">
+          <p>
+              After graduation I jumped right into the workplace with a company called <a href="https://www.netmaker.io/" target="_blank">Netmaker</a>. 
+              There I aquired knowledge about the intracacies of networking, infastructure and QA. I worked on learning Golang and honed my threading skills
+              with Terraform. I aquired skills with Docker, LXC containers, github workflows, building installers and having more familiarity with linux systems. I deploy documentation
+              on the latest releases that come out with python sphinx. 
+          </p>
+        </div>
+        <div id="unique-id3" class="w3-2021-willow w3-card-4 w3-padding w3-round-medium" style="display: none;">
+          <p>
+            I also design the website for <a href="https://thetaxraven.com" target="_blank">The Tax Raven</a> and provide any websites for customers 
+            of The Tax Raven if they need an asthetic landing page to integrate with their CRM. I also handle automations with the CRM involving client intake for getting taxes done.
+          </p>
+        </div>
+        
     
   <!-- End About Section -->
     </div>
@@ -112,10 +139,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
     <!-- Grid for photos -->
     <!-- row for swarmbot -->
-    <div class="w3-row-padding" style="margin:0 -16px">
+    <div class="w3-row-padding" style="margin:0 -16px;">
         <div class="w3-quarter w3-margin-bottom"></div>
         <div class="w3-half w3-margin-bottom">
-            <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+            <ul class="w3-ul w3-white w3-center">
               <li class="w3-dark-grey w3-xlarge w3-padding-32">Swarmbot</li>
               <li class="w3-padding-16">
                <img src="images/othello.gif" alt="Swarmbot playing othello" width="100%">
@@ -141,7 +168,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <!-- row for unreal engine projects -->
     <div class="w3-row-padding" style="margin: 0 -16px">
       <div class="w3-half w3-margin-bottom">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+        <ul class="w3-ul w3-white w3-center">
           <li class="w3-dark-grey w3-xlarge w3-padding-32">Crashed Ship UE project</li>
           <li class="w3-padding-16">
             <iframe width="100%" height="315" src="https://www.youtube.com/embed/l3KxFsieIXA?si=m9QZEkEmiO1Z_boY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -164,7 +191,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       </div>
 
       <div class="w3-half w3-margin-bottom">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+        <ul class="w3-ul w3-white w3-center">
           <li class="w3-dark-grey w3-xlarge w3-padding-32">UE VR project</li>
           <li class="w3-padding-16">
             <iframe width="100%" height="315" src="https://www.youtube.com/embed/Dmnfe9pQ4i0?si=hXtROJn-cFCRJkOG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -192,7 +219,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <div class="w3-row-padding" style="margin:0 -16px">
 
         <div class="w3-half w3-margin-bottom">
-            <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+            <ul class="w3-ul w3-white w3-center">
               <li class="w3-dark-grey w3-xlarge w3-padding-32">The Tax Raven</li>
               <li class="w3-padding-16">
                 <iframe src="https://thetaxraven.com" width="100%" height="400">
@@ -202,7 +229,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         </div>
 
         <div class="w3-half w3-margin-bottom">
-            <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+            <ul class="w3-ul w3-white w3-center">
               <li class="w3-dark-grey w3-xlarge w3-padding-32">Lawn Commander Property Services</li>
               <li class="w3-padding-16">
                 <iframe src="https://www.lawncommanderpropertyservices.com/" width="100%" height="400">
@@ -216,7 +243,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   </div>
 
   <!-- Contact Section -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+  <div class="w3-padding-64 w3-content w3-text-khaki" id="contact">
     <h2 class="w3-text-light-grey">Contact Me</h2>
     <hr style="width:200px" class="w3-opacity">
 
@@ -224,13 +251,15 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Bellingham, MA</p>
       <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: (203) 415-6873</p>
       <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: crispspiceguitar@gmail.com</p>
-      <p><a href="https://www.linkedin.com/in/christopher-blaha-5210b6a9/" target="_blank"><i class="fa fa-linkedin fa-fw w3-text-white w3-xxlarge w3-margin-right"></i></a> Linkedln</p>
+      <p><a href="https://www.linkedin.com/in/christopher-blaha-5210b6a9/" target="_blank"><i class="fa fa-linkedin fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Linkedln</a></p>
     </div><br>
   <!-- End Contact Section -->
   </div>
   
     <!-- Footer -->
-  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+  <footer class="w3-content w3-padding-64 w3-text-light-grey">
+      <p>Made with <a href="http://imakewebthings.com/waypoints/" target="_blank">Waypoints</a></p>
+      <p>and <a href="https://www.curtainsjs.com/" target="_blank">curtainsjs</a></p>
     
   <!-- End footer -->
   </footer>
@@ -238,6 +267,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- END PAGE CONTENT -->
 </div>
 
+<ul class="notifications" id="notifications"></ul>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="./scripts/waypoints/lib/noframework.waypoints.min.js"></script>
+<script src="./scripts/headerpic.js" type="module"></script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -277,6 +311,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       }
     });
   </script>
+  
+  
 
 </body>
 </html>
