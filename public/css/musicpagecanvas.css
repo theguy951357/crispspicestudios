@@ -31,10 +31,6 @@
         flex-wrap: wrap;
     }
 
-    #page-wrap {
-        position: relative;
-    }
-
     /*** canvas ***/
 
     /* our canvas will be a bit taller than our window to avoid "glitched" top and bottom edges */
@@ -53,38 +49,6 @@
         opacity: 1;
     }
 
-    #back-to-lib-link {
-        display: inline-block;
-        position: fixed;
-        top: 0;
-        right: 0;
-        padding: 0.25em 0.5em;
-        background: #ee6557;
-        color: white;
-        text-decoration: none;
-        z-index: 20;
-        font-size: 0.85em;
-    }
-
-    #back-to-lib-link:hover {
-        background: black;
-    }
-
-    #source-code-link {
-        display: inline-block;
-        position: fixed;
-        bottom: 2em;
-        right: 1em;
-        padding: 0.25em 0.5em;
-        background: #ee6557;
-        color: white;
-        text-decoration: none;
-        z-index: 50;
-    }
-
-    #source-code-link:hover {
-        background: black;
-    }
 
     /*** content ***/
 
@@ -96,16 +60,7 @@
         padding: 40px 0 0 0;
     }
 
-    #debug {
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        background: white;
-        font-size: 0.9em;
-        padding: 0.25em 0.5em;
-        z-index: 10;
-    }
-
+    
     #planes {
         overflow: hidden;
         opacity: 0;
