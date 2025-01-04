@@ -39,16 +39,20 @@
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
-  <div id="canvas"></div>
+<div id="page-wrap">
 
-  <!-- Automatic Slideshow Images -->
-  <div class="w3-display-container w3-center plane-wrapper" id="planes">
-    <span class="w3-wide plane-title">CHRIS BLAHA</span>
-    <div class="plane-inner">
-      <div class="plane">
-        <img src="../images/chrismusic/chrismusician2.jpg" crossorigin="" data-sampler="plane-texture" alt="picture of me" style="width:75%">
+    <div id="canvas"></div>
+
+    <!-- Automatic Slideshow Images -->
+    <div class="w3-display-container w3-center plane-wrapper" id="planes">
+      <span class="w3-wide plane-title">CHRIS BLAHA</span>
+      <div class="plane-inner">
+        <div class="plane">
+          <img src="../images/chrismusic/chrismusician2.jpg" crossorigin="" data-sampler="plane-texture" alt="picture of me" style="width:75%">
+        </div>
       </div>
     </div>
+
   </div>
   <!-- <div class="mySlides w3-display-container w3-center">
     <img src="../images/chriscyberpunk1.jpeg" style="width:100%">
@@ -166,20 +170,20 @@
 
 <script>
 // Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
-carousel();
+//var myIndex = 0;
+//carousel();
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
-}
+// function carousel() {
+//   var i;
+//   var x = document.getElementsByClassName("mySlides");
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = "none";  
+//   }
+//   myIndex++;
+//   if (myIndex > x.length) {myIndex = 1}    
+//   x[myIndex-1].style.display = "block";  
+//   setTimeout(carousel, 4000);    
+// }
 
 // Used to toggle the menu on small screens when clicking on the menu button
 function myFunction() {
