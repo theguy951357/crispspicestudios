@@ -13,7 +13,7 @@ window.addEventListener("load", () => {
         scrollEffect = curtains.lerp(scrollEffect, 0, 0.075);
 
         // update our number of planes drawn debug value
-        debugElement.innerText = planeDrawn;
+        //debugElement.innerText = planeDrawn;
     }).onScroll(() => {
         // get scroll deltas to apply the effect on scroll
         const delta = curtains.getScrollDeltas();
@@ -55,7 +55,7 @@ window.addEventListener("load", () => {
     const planeElements = document.getElementsByClassName("plane");
 
     // keep track of the number of plane we're currently drawing
-    const debugElement = document.getElementById("debug-value");
+    //const debugElement = document.getElementById("debug-value");
     // we need to fill the counter with all our planes
     let planeDrawn = planeElements.length;
 
