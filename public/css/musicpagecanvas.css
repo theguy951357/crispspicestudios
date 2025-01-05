@@ -137,6 +137,11 @@
 
 }
 
+.fix-links{
+    position: relative;
+    z-index: 99;
+}
+
 
 
 
