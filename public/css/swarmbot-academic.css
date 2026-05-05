@@ -1,0 +1,549 @@
+/* ============================================
+   SWARMBOT-ACADEMIC.CSS
+   White-background academic journal aesthetic
+   with UNCA branding
+   ============================================ */
+
+   @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;500;600&family=Source+Code+Pro:wght@400;500&display=swap');
+
+   :root {
+     --unca-blue:    #003087;   /* UNCA brand blue */
+     --unca-blue-lt: #e8edf6;
+     --ink:          #1a1a1a;
+     --ink-soft:     #333333;
+     --muted:        #666666;
+     --muted-lt:     #999999;
+     --rule:         #d8d8d8;
+     --bg:           #ffffff;
+     --bg-off:       #f7f7f7;
+     --bg-note:      #faf8f2;
+     --bg-info:      #f0f4fb;
+     --green:        #2a7a2a;
+     --green-bg:     #eaf4ea;
+     --red:          #c0392b;
+     --red-bg:       #fbeaea;
+     --teal:         #007C7A;
+   
+     --font-serif:   'Lora', Georgia, serif;
+     --font-sans:    'Source Sans 3', system-ui, sans-serif;
+     --font-mono:    'Source Code Pro', monospace;
+   
+     --measure:      68ch;   /* optimal reading width */
+     --paper-max:    860px;
+   }
+   
+   /* ── RESET ── */
+   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+   html { font-size: 16px; scroll-behavior: smooth; }
+   
+   body {
+     font-family: var(--font-sans);
+     background: var(--bg-off);
+     color: var(--ink);
+     line-height: 1.7;
+     -webkit-font-smoothing: antialiased;
+   }
+   
+   a { color: var(--unca-blue); text-decoration: underline; text-underline-offset: 2px; }
+   a:hover { color: var(--teal); }
+   
+   /* ── INSTITUTIONAL HEADER ── */
+   
+   .inst-header {
+     background: #ffffff;
+     border-bottom: 3px solid var(--unca-blue);
+     position: sticky;
+     top: 0;
+     z-index: 100;
+     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+   }
+   
+   .inst-header-inner {
+     max-width: var(--paper-max);
+     margin: 0 auto;
+     padding: 0.75rem 2rem;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 1rem;
+   }
+   
+   .inst-back {
+     font-family: var(--font-sans);
+     font-size: 0.8rem;
+     font-weight: 600;
+     color: var(--muted);
+     text-decoration: none;
+     letter-spacing: 0.04em;
+     white-space: nowrap;
+     display: flex;
+     align-items: center;
+     gap: 0.4rem;
+     transition: color 0.2s;
+   }
+   .inst-back:hover { color: var(--unca-blue); text-decoration: none; }
+   
+   .unca-wordmark {
+     height: 44px;
+     width: auto;
+     display: block;
+   }
+   
+   /* ── PAPER WRAP ── */
+   
+   .paper-wrap {
+     max-width: var(--paper-max);
+     margin: 2.5rem auto 4rem;
+     padding: 0 1.5rem;
+   }
+   
+   .paper {
+     background: #ffffff;
+     border: 1px solid var(--rule);
+     border-radius: 2px;
+     padding: 3rem 4rem;
+     box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+   }
+   
+   /* ── TITLE BLOCK ── */
+   
+   .paper-journal-label {
+     font-family: var(--font-sans);
+     font-size: 0.7rem;
+     font-weight: 600;
+     letter-spacing: 0.18em;
+     text-transform: uppercase;
+     color: var(--unca-blue);
+     margin-bottom: 1.25rem;
+   }
+   
+   .paper-title {
+     font-family: var(--font-serif);
+     font-size: clamp(1.5rem, 3vw, 2.1rem);
+     font-weight: 700;
+     line-height: 1.25;
+     color: var(--ink);
+     margin-bottom: 1.75rem;
+     letter-spacing: -0.01em;
+   }
+   
+   .paper-meta {
+     display: flex;
+     align-items: flex-start;
+     justify-content: space-between;
+     gap: 2rem;
+     flex-wrap: wrap;
+     margin-bottom: 1.5rem;
+   }
+   
+   .paper-author {
+     display: flex;
+     flex-direction: column;
+     gap: 0.25rem;
+   }
+   
+   .author-name {
+     font-family: var(--font-sans);
+     font-size: 1rem;
+     font-weight: 600;
+     color: var(--ink);
+   }
+   
+   .author-affil {
+     font-size: 0.82rem;
+     color: var(--muted);
+     font-style: italic;
+   }
+   
+   .author-affil + .author-affil {
+     font-style: normal;
+     color: var(--muted-lt);
+     font-size: 0.78rem;
+   }
+   
+   .paper-links {
+     display: flex;
+     gap: 0.5rem;
+     flex-wrap: wrap;
+     flex-shrink: 0;
+   }
+   
+   .paper-link-btn {
+     display: inline-flex;
+     align-items: center;
+     gap: 0.4rem;
+     font-family: var(--font-sans);
+     font-size: 0.75rem;
+     font-weight: 600;
+     letter-spacing: 0.04em;
+     padding: 0.4rem 0.9rem;
+     border-radius: 3px;
+     text-decoration: none;
+     transition: background 0.2s, color 0.2s;
+     background: var(--unca-blue);
+     color: #ffffff;
+     border: 1px solid var(--unca-blue);
+   }
+   .paper-link-btn:hover {
+     background: #001f5c;
+     color: #ffffff;
+     text-decoration: none;
+   }
+   
+   .paper-link-btn--outline {
+     background: transparent;
+     color: var(--unca-blue);
+   }
+   .paper-link-btn--outline:hover {
+     background: var(--unca-blue-lt);
+     color: var(--unca-blue);
+   }
+   
+   .paper-subtitle {
+     font-size: 0.92rem;
+     color: var(--muted);
+     line-height: 1.7;
+     max-width: var(--measure);
+     margin-bottom: 1.5rem;
+   }
+   .paper-subtitle a { color: var(--unca-blue); }
+   
+   .paper-rule {
+     border: none;
+     border-top: 2px solid var(--unca-blue);
+     margin: 0;
+   }
+   
+   /* ── SECTIONS ── */
+   
+   .paper-section {
+     padding: 2.5rem 0;
+   }
+   
+   .paper-section-title {
+     font-family: var(--font-serif);
+     font-size: 1.25rem;
+     font-weight: 700;
+     color: var(--ink);
+     margin-bottom: 1rem;
+     padding-bottom: 0.4rem;
+     border-bottom: 1px solid var(--rule);
+   }
+   
+   .paper-section p {
+     font-size: 0.95rem;
+     color: var(--ink-soft);
+     line-height: 1.8;
+     max-width: var(--measure);
+     margin-bottom: 1.25rem;
+   }
+   
+   .paper-abstract {
+     font-family: var(--font-serif);
+     font-style: italic;
+     font-size: 0.95rem !important;
+     background: var(--bg-off);
+     border-left: 3px solid var(--unca-blue);
+     padding: 1rem 1.25rem;
+     border-radius: 0 2px 2px 0;
+     max-width: var(--measure) !important;
+   }
+   .paper-abstract a { color: var(--unca-blue); }
+   
+   .section-divider {
+     border: none;
+     border-top: 1px solid var(--rule);
+     margin: 0;
+   }
+   
+   /* ── FIGURE BLOCKS ── */
+   
+   .figure-block {
+     margin: 1.75rem 0;
+   }
+   
+   .figure-caption-top {
+     font-family: var(--font-sans);
+     font-size: 0.78rem;
+     font-weight: 600;
+     color: var(--muted);
+     letter-spacing: 0.03em;
+     margin-bottom: 0.6rem;
+   }
+   
+   .figure-caption-bottom {
+     font-family: var(--font-sans);
+     font-size: 0.78rem;
+     color: var(--muted-lt);
+     font-style: italic;
+     margin-top: 0.5rem;
+     max-width: var(--measure);
+     line-height: 1.5;
+   }
+   
+   /* ── WIN RATE BARS ── */
+   
+   .academic-bars {
+     background: var(--bg-off);
+     border: 1px solid var(--rule);
+     border-radius: 3px;
+     padding: 1.5rem;
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+   }
+   
+   .abar-row {
+     display: grid;
+     grid-template-columns: 220px 1fr 48px;
+     align-items: center;
+     gap: 1rem;
+   }
+   
+   .abar-label {
+     font-family: var(--font-sans);
+     font-size: 0.82rem;
+     font-weight: 500;
+     color: var(--ink-soft);
+     text-align: right;
+   }
+   
+   .abar-track {
+     height: 10px;
+     background: #e0e0e0;
+     border-radius: 99px;
+     overflow: hidden;
+   }
+   
+   .abar-fill {
+     height: 100%;
+     width: 0;
+     border-radius: 99px;
+     transition: width 1.3s cubic-bezier(0.16, 1, 0.3, 1);
+   }
+   .abar-fill.animated { width: var(--target-width); }
+   
+   .abar-ant    { background: linear-gradient(90deg, #007C7A, #00a8a5); }
+   .abar-cuckoo { background: linear-gradient(90deg, #8e44ad, #b97dce); }
+   .abar-firefly{ background: linear-gradient(90deg, #c9a84c, #e0c06a); }
+   .abar-monte  { background: linear-gradient(90deg, #003087, #4a6faa); }
+   
+   .abar-pct {
+     font-family: var(--font-mono);
+     font-size: 0.8rem;
+     font-weight: 600;
+     color: var(--ink-soft);
+   }
+   
+   /* ── CALLOUT BOXES ── */
+   
+   .callout-box {
+     border-radius: 3px;
+     padding: 1rem 1.25rem;
+     margin: 1.5rem 0;
+     font-size: 0.88rem;
+     line-height: 1.7;
+     max-width: var(--measure);
+   }
+   
+   .callout-box strong { font-weight: 700; }
+   
+   .callout-box--note {
+     background: var(--bg-note);
+     border-left: 3px solid var(--unca-blue);
+     color: var(--ink-soft);
+   }
+   
+   .callout-box--info {
+     background: var(--bg-info);
+     border-left: 3px solid var(--teal);
+     color: var(--ink-soft);
+   }
+   
+   /* ── INTERPRETATION BOX ── */
+   
+   .interpretation-box {
+     background: var(--bg-off);
+     border: 1px solid var(--rule);
+     border-top: 3px solid var(--teal);
+     border-radius: 0 0 3px 3px;
+     padding: 1rem 1.25rem;
+     margin-top: 1rem;
+     max-width: var(--measure);
+   }
+   
+   .interp-label {
+     font-family: var(--font-sans);
+     font-size: 0.72rem;
+     font-weight: 700;
+     letter-spacing: 0.1em;
+     text-transform: uppercase;
+     color: var(--teal);
+     margin-bottom: 0.5rem;
+     display: flex;
+     align-items: center;
+     gap: 0.4rem;
+   }
+   
+   .interpretation-box p {
+     font-size: 0.88rem !important;
+     color: var(--ink-soft) !important;
+     margin-bottom: 0 !important;
+     max-width: none !important;
+   }
+   
+   /* ── CHARTS ── */
+   
+   .charts-2col {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 1.5rem;
+     margin: 1.75rem 0;
+   }
+   
+   .chart-area {
+     height: 260px;
+     background: #ffffff;
+     border: 1px solid var(--rule);
+     border-radius: 2px;
+   }
+   
+   /* ── TREE MAPS ── */
+   
+   .treemap-block {
+     margin: 2.5rem 0;
+     padding-top: 2rem;
+     border-top: 1px dashed var(--rule);
+   }
+   .treemap-block:first-of-type { border-top: none; padding-top: 0; }
+   
+   .treemap-heading {
+     font-family: var(--font-sans);
+     font-size: 1rem;
+     font-weight: 600;
+     color: var(--ink);
+     margin-bottom: 0.75rem;
+   }
+   
+   .treemap-desc {
+     font-size: 0.9rem !important;
+     color: var(--muted) !important;
+     line-height: 1.75 !important;
+     max-width: var(--measure) !important;
+     margin-bottom: 1.25rem !important;
+   }
+   
+   .treemap-area {
+     height: 60vh;
+     min-height: 400px;
+     background: #fff;
+     border: 1px solid var(--rule);
+     border-radius: 2px;
+   }
+   
+   /* ── ALGO CHIPS ── */
+   
+   .algo-chip {
+     display: inline-block;
+     font-family: var(--font-sans);
+     font-size: 0.72rem;
+     font-weight: 700;
+     letter-spacing: 0.1em;
+     text-transform: uppercase;
+     padding: 0.25rem 0.7rem;
+     border-radius: 3px;
+   }
+   
+   .algo-monte  { background: var(--unca-blue-lt); color: var(--unca-blue); }
+   .algo-ant    { background: #e0f4f4; color: var(--teal); }
+   .algo-firefly{ background: #fdf6e3; color: #8a6700; }
+   .algo-cuckoo { background: #f3eaf8; color: #6b2fa0; }
+   
+   /* ── LEGEND TEXT ── */
+   
+   .legend-green {
+     font-weight: 600;
+     color: var(--green);
+     background: var(--green-bg);
+     padding: 0.1em 0.35em;
+     border-radius: 2px;
+   }
+   .legend-red {
+     font-weight: 600;
+     color: var(--red);
+     background: var(--red-bg);
+     padding: 0.1em 0.35em;
+     border-radius: 2px;
+   }
+   
+   /* ── REFERENCES ── */
+   
+   .ref-list {
+     list-style: none;
+     display: flex;
+     flex-direction: column;
+     gap: 0.75rem;
+     max-width: var(--measure);
+   }
+   
+   .ref-list li {
+     font-size: 0.88rem;
+     color: var(--ink-soft);
+     line-height: 1.6;
+     padding-left: 1.25rem;
+     position: relative;
+   }
+   .ref-list li::before {
+     content: '–';
+     position: absolute;
+     left: 0;
+     color: var(--muted-lt);
+   }
+   
+   /* ── FOOTER ── */
+   
+   .acad-footer {
+     background: var(--unca-blue);
+     padding: 2rem;
+     margin-top: 3rem;
+   }
+   
+   .acad-footer-inner {
+     max-width: var(--paper-max);
+     margin: 0 auto;
+     display: flex;
+     align-items: center;
+     gap: 1.5rem;
+     flex-wrap: wrap;
+   }
+   
+   .acad-footer-logo {
+     height: 36px;
+     width: auto;
+     filter: brightness(0) invert(1);
+     opacity: 0.9;
+   }
+   
+   .acad-footer p {
+     font-size: 0.8rem;
+     color: rgba(255,255,255,0.7);
+   }
+   .acad-footer a { color: rgba(255,255,255,0.9); }
+   .acad-footer a:hover { color: #fff; }
+   
+   /* ── RESPONSIVE ── */
+   
+   @media (max-width: 860px) {
+     .paper { padding: 2rem 1.75rem; }
+     .charts-2col { grid-template-columns: 1fr; }
+     .abar-row { grid-template-columns: 160px 1fr 40px; }
+   }
+   
+   @media (max-width: 600px) {
+     .paper { padding: 1.5rem 1rem; }
+     .paper-meta { flex-direction: column; }
+     .abar-row { grid-template-columns: 1fr; gap: 0.3rem; }
+     .abar-label { text-align: left; }
+     .unca-wordmark { height: 32px; }
+     .inst-header-inner { padding: 0.6rem 1rem; }
+   }

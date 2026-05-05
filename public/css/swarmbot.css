@@ -1,0 +1,199 @@
+/* ============================================
+   SWARMBOT.CSS — page-specific styles
+   ============================================ */
+
+/* ── HERO ── */
+
+.swarm-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: var(--ink);
+    overflow: hidden;
+    padding: var(--space-xl) var(--space-md);
+    padding-top: calc(var(--nav-height) + var(--space-xl));
+  }
+  
+  .swarm-hero-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  
+  .swarm-particle {
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--s);
+    height: var(--s);
+    background: var(--teal);
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: swarmFloat var(--d) ease-in-out infinite alternate;
+  }
+  
+  @keyframes swarmFloat {
+    0%   { transform: translate(0, 0) scale(1); opacity: 0.2; }
+    50%  { opacity: 0.6; }
+    100% { transform: translate(20px, -30px) scale(1.5); opacity: 0.2; }
+  }
+  
+  .swarm-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+  }
+  
+  .swarm-hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 9vw, 7rem);
+    font-weight: 800;
+    line-height: 0.95;
+    color: var(--cream);
+    letter-spacing: -0.02em;
+    margin: var(--space-sm) 0 var(--space-md);
+  }
+  
+  .swarm-hero-title em {
+    font-style: normal;
+    color: var(--teal);
+  }
+  
+  .swarm-hero-sub {
+    font-size: 1rem;
+    color: rgba(245,240,232,0.55);
+    line-height: 1.8;
+    max-width: 520px;
+  }
+  
+  .swarm-hero-sub a {
+    color: var(--teal);
+    border-bottom: 1px solid rgba(0,124,122,0.4);
+    transition: border-color var(--duration-fast);
+  }
+  .swarm-hero-sub a:hover { border-color: var(--teal); }
+  
+  /* ── SECTIONS ── */
+  
+  #win-rate  { background: var(--ink); border-top: 1px solid rgba(255,255,255,0.04); }
+  #performance { background: #111; border-top: 1px solid rgba(255,255,255,0.04); }
+  #treemaps  { background: var(--ink); border-top: 1px solid rgba(255,255,255,0.04); }
+  
+  .swarm-intro {
+    font-size: 0.95rem;
+    color: rgba(245,240,232,0.55);
+    line-height: 1.8;
+    max-width: 680px;
+    margin-bottom: var(--space-lg);
+  }
+  .swarm-intro strong { color: var(--cream); }
+  
+  /* ── WIN BARS ── */
+  
+  .win-bars {
+    max-width: 600px;
+  }
+  
+  /* ── CHARTS ── */
+  
+  .charts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+  
+  .chart-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+  }
+  
+  .chart-title {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--cream);
+    margin-bottom: var(--space-sm);
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+  
+  .chart-note {
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: var(--teal);
+    letter-spacing: 0.04em;
+  }
+  
+  .chart-area {
+    height: 260px;
+    /* Google Charts renders into here — background must be transparent or white */
+    background: #fff;
+    border-radius: var(--radius);
+  }
+  
+  /* ── TREE MAPS ── */
+  
+  .treemap-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+  
+  .treemap-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    padding: var(--space-md);
+  }
+  
+  .treemap-header {
+    margin-bottom: var(--space-sm);
+  }
+  
+  .algo-badge {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border-radius: 99px;
+  }
+  
+  .algo-monte  { background: rgba(100,100,200,0.2); color: #9090ff; }
+  .algo-ant    { background: rgba(0,124,122,0.2);   color: var(--teal-light); }
+  .algo-firefly{ background: rgba(201,168,76,0.2);  color: var(--gold); }
+  .algo-cuckoo { background: rgba(247,92,92,0.2);   color: var(--coral); }
+  
+  .treemap-desc {
+    font-size: 0.875rem;
+    color: rgba(245,240,232,0.5);
+    line-height: 1.75;
+    max-width: 680px;
+    margin-bottom: var(--space-md);
+  }
+  
+  .treemap-area {
+    height: 60vh;
+    min-height: 400px;
+    background: #fff;
+    border-radius: var(--radius);
+  }
+  
+  /* ── RESPONSIVE ── */
+  
+  @media (max-width: 900px) {
+    .charts-grid { grid-template-columns: 1fr; }
+  }
+  
+  @media (max-width: 768px) {
+    .swarm-hero { padding-top: calc(var(--nav-height) + var(--space-lg)); }
+  }

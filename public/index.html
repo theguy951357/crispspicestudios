@@ -1,317 +1,230 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Christopher Blaha</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="./images/icononly_transparent_nobuffer.png">
-<link rel="stylesheet" href="./css/w3.css">
-<link rel="stylesheet" href="./css/main.css">
-<link rel="stylesheet" href="./css/curtains.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
-<script src="./scripts/w3.js"></script>
-
-
-<!-- update the version number as needed -->
-<script defer src="/__/firebase/9.13.0/firebase-app-compat.js"></script>
-<!-- include only the Firebase features as you need -->
-<script defer src="/__/firebase/9.13.0/firebase-auth-compat.js"></script>
-<script defer src="/__/firebase/9.13.0/firebase-database-compat.js"></script>
-<script defer src="/__/firebase/9.13.0/firebase-firestore-compat.js"></script>
-<script defer src="/__/firebase/9.13.0/firebase-functions-compat.js"></script>
-<script defer src="/__/firebase/9.13.0/firebase-messaging-compat.js"></script>
-<script defer src="/__/firebase/9.13.0/firebase-storage-compat.js"></script>
-<script defer src="/__/firebase/9.13.0/firebase-analytics-compat.js"></script>
-<script defer src="/__/firebase/9.13.0/firebase-remote-config-compat.js"></script>
-<script defer src="/__/firebase/9.13.0/firebase-performance-compat.js"></script>
-<!-- 
-  initialize the SDK after all desired features are loaded, set useEmulator to false
-  to avoid connecting the SDK to running emulators.
--->
-<script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-<style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #EFE1CE;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chris Blaha</title>
+  <link rel="icon" href="./images/icononly_transparent_nobuffer.png">
+  <link rel="stylesheet" href="./css/modern.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body class="w3-2021-inkwell">
-  
-  
+<body>
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" style="z-index: 100;">
-  <!-- Avatar image in top left corner -->
-  <img src="images/fulllogo_transparent.png" style="width:100%">
-  <a href="./music/chrisblaha.html" class="w3-bar-item w3-button w3-padding-large w3-black">
-    <i class="fa fa-music w3-xxlarge"></i>
-    <p>MY MUSIC</p>
-  </a>
-  <!--<a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>ABOUT</p>
-  </a>
-  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-eye w3-xxlarge"></i>
-    <p>PROJECTS</p>
-  </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>CONTACT</p>
-  </a> -->
-</nav>
+  <!-- ── SHARED NAV ── -->
+  <nav class="site-nav">
+    <a href="./index.html">
+      <img src="./images/fulllogo_transparent.png" class="nav-logo" alt="CrispSpice Studios">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="./music/chrisblaha.html">Music</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar" style="z-index: 100;">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <img class="w3-bar-item w3-button" src="images/fulllogo_transparent.png" style="width:15% !important">
-    <a href="./music/chrisblaha.html" class="w3-bar-item w3-button" style="width:20% !important">MY MUSIC</a>
-    <!-- <a href="#about" class="w3-bar-item w3-button" style="width:20% !important">ABOUT</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:20% !important">PROJECTS</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:20% !important">CONTACT</a> -->
+  <div class="nav-mobile">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="./music/chrisblaha.html">Music</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </div>
-</div>
 
-<!-- Page Content -->
-<div class="w3-padding-large" id="main">
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-2021-inkwell"  id="home">
+  <!-- ── HERO ── -->
+  <header class="hero" id="home">
     <div id="page-wrap">
+      <div id="canvas"></div>
+      <div class="flex-wrapper multi-textures">
+        <img src="./images/displacement.jpg" crossorigin="" data-sampler="displacement" />
+        <img src="./images/chrisheadshot1.jpeg" crossorigin="" />
+        <img src="./images/chriscyberpunk1.jpeg" crossorigin="" />
+      </div>
+    </div>
 
-			<div id="canvas"></div>
+    <div class="hero-text">
+      <p class="hero-label reveal">Software Engineer · Web Developer · Musician</p>
+      <h1 class="hero-name reveal">Chris<br>Blaha</h1>
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn btn-primary">View Work</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
 
-			<div class="flex-wrapper multi-textures">
-				<!-- notice here we are using the data-sampler attribute to name our displacement sampler uniform -->
-				<img src="./images/displacement.jpg" crossorigin="" data-sampler="displacement" />
-				<img src="./images/chrisheadshot1.jpeg" crossorigin="" />
-				<img src="./images/chriscyberpunk1.jpeg" crossorigin="" />
-			</div>
-		</div>
-    <h1 class="w3-jumbo w3-animate-left" style="z-index: 20;">Chris Blaha</h1>
-    <p class="w3-animate-right" style="z-index: 20;">Software Engineer.</p>
-
+    <div class="hero-scroll-hint">
+      <span></span>
+    </div>
   </header>
 
-  <!-- About Section -->
-    <div class="w3-content w3-justify w3-text-white w3-padding-64" id="about">
-        <h2 class="w3-text-light-grey">About Me</h2>
-        <hr style="width:200px" class="w3-opacity">
-        <div id="unique-id" class="w3-2021-buttercream w3-card-4 w3-padding w3-margin-bottom w3-round-medium" style="display: none;">
-          <p>     I'm a versatile computer science professional with a passion for innovation in technology and web design. A graduate of the University of North Carolina Asheville, I hold a bachelor's degree in computer science and a minor in music. During my studies, I delved into artificial intelligence, conducting research on swarm intelligence. My project, "Swarmbot," harnessed advanced techniques like Monte Carlo Tree Search, metaheuristics, and genetic algorithms to create a system where swarm agents adapt and thrive toward achieving optimal goals. You can find it below with a link to the results and a link to the published article in the UNCA Journal of Undergraduate Research.
-          </p>
-        </div> 
-        <div id="unique-id2" class="w3-2021-desert-mist w3-card-4 w3-padding w3-margin-bottom w3-round-medium" style="display: none;">
-          <p>
-            After graduation, I joined Netmaker, where I gained hands-on expertise in networking, infrastructure, and quality assurance. My technical skillset includes Golang programming, advanced threading techniques with Terraform, containerization using Docker and LXC, GitHub workflows, and Linux systems management. I also specialize in crafting user-friendly documentation using Python Sphinx for streamlined communication and collaboration.
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <div class="section">
+      <p class="section-label reveal">Background</p>
+      <h2 class="section-title reveal">About <em>Me</em></h2>
+      <div class="divider reveal"></div>
 
-            I recently advanced my career by joining MEDITECH, a leading healthcare software company, where I focus on enhancing interoperability within electronic health record (EHR) systems. My role involves designing and implementing solutions that enable seamless communication and data sharing between disparate healthcare systems. By improving interoperability, I contribute to creating more efficient workflows, better patient outcomes, and stronger collaboration across the healthcare ecosystem.
-          </p>
+      <div class="about-grid stagger-children">
+        <div class="about-card">
+          <div class="about-card-icon">
+            <i class="fa fa-graduation-cap"></i>
+          </div>
+          <h3>Research & Academia</h3>
+          <p>Computer science graduate of UNC Asheville with a minor in music. Conducted AI research on swarm intelligence — building "Swarmbot" using Monte Carlo Tree Search, metaheuristics, and genetic algorithms. Published in the UNCA Journal of Undergraduate Research.</p>
         </div>
-        <div id="unique-id3" class="w3-2021-willow w3-card-4 w3-padding w3-round-medium" style="display: none;">
-          <p>
-            In addition to my technical background, I design visually compelling websites for businesses. As a web developer, I create aesthetic landing pages that integrate seamlessly with CRM systems and automate client workflows. Whether it's building engaging websites or optimizing backend systems, I am dedicated to delivering innovative solutions that meet the needs of my clients.
-          </p>
-          <p>
-            Looking for a reliable web designer or developer to enhance your digital presence? Get in touch with me!
-          </p>
+
+        <div class="about-card">
+          <div class="about-card-icon">
+            <i class="fa fa-code"></i>
+          </div>
+          <h3>Industry Experience</h3>
+          <p>At Netmaker I gained deep expertise in networking, infrastructure, and QA — working with Go, Terraform, Docker, LXC, and Linux systems. Now at MEDITECH, I focus on EHR interoperability, designing solutions for seamless communication across healthcare systems.</p>
         </div>
-        
-    
-  <!-- End About Section -->
-    </div>
-  
-  <!-- Portfolio Section -->
-  <div class="w3-padding-64 w3-content" id="photos">
-    <h2 class="w3-text-light-grey">My Projects</h2>
-    <hr style="width:200px" class="w3-opacity">
 
-    <!-- Grid for photos -->
-    <!-- row for swarmbot -->
-    <div class="w3-row-padding" style="margin:0 -16px;">
-        <div class="w3-quarter w3-margin-bottom"></div>
-        <div class="w3-half w3-margin-bottom">
-            <ul class="w3-ul w3-white w3-center">
-              <li class="w3-dark-grey w3-xlarge w3-padding-32">Swarmbot</li>
-              <li class="w3-padding-16">
-               <img src="images/othello.gif" alt="Swarmbot playing othello" width="100%">
-              </li>
-              <li class="w3-padding-16">
-                <a href="https://github.com/theguy951357/swarmbot" target="_blank">Github Repo</a>
-              </li>
-              <li class="w3-padding-16">
-                <a href="swarmbot/swarmbotresults.html">Results</a>
-              </li>
-              <li class="w3-light-grey w3-padding-24">
-                <a href="https://unca-urcap.org/ugr_journal.php?publication_static_id=4&forum_id=11" target="_blank">
-                    <button class="w3-button w3-light-grey w3-padding-large w3-section">
-                      <i class="fa-solid fa-building-columns"> UNCA Journal Entry</i>
-                    </button>
-                </a>
-              </li>
-            </ul>
+        <div class="about-card">
+          <div class="about-card-icon">
+            <i class="fa fa-globe"></i>
+          </div>
+          <h3>Web & Design</h3>
+          <p>I design and build websites for businesses — aesthetic landing pages that integrate with CRM systems and automate client workflows. If you're looking for a developer to sharpen your digital presence, reach out.</p>
         </div>
-        <div class="w3-third w3-margin-bottom"></div>
-    </div>
-
-    <!-- row for unreal engine projects -->
-    <div class="w3-row-padding" style="margin: 0 -16px">
-      <div class="w3-half w3-margin-bottom">
-        <ul class="w3-ul w3-white w3-center">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Crashed Ship UE project</li>
-          <li class="w3-padding-16">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/l3KxFsieIXA?si=m9QZEkEmiO1Z_boY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </li>
-          <li class="w3-padding-16">
-            <a href="https://github.com/theguy951357/Project2MaxChris" target="_blank">Github Repo</a>
-          </li>
-          <li class="w3-padding-16">
-            <p>
-                This is an Unreal engine VR project done collaboratively with another student named Max Levine in my VR class. 
-              I designed the ship with an asset pack I found on the UE marketplace and provided most of the sound effects
-              and background music while on the ship with my own instruments on Protools.
-            </p>
-            <p>
-                This mini-game starts out on a cargo ship that is in need of repairs. You match the different colored gears to fix the ship
-              and it goes into hyper-drive. The ship crashes anyways on a planet where you exit and find a bunker.
-            </p>
-          </li>
-        </ul>
-      </div>
-
-      <div class="w3-half w3-margin-bottom">
-        <ul class="w3-ul w3-white w3-center">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">UE VR project</li>
-          <li class="w3-padding-16">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/Dmnfe9pQ4i0?si=hXtROJn-cFCRJkOG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </li>
-          <li class="w3-padding-16">
-            <a href="https://github.com/theguy951357/Project3MaxChris" target="_blank">Github Repo</a>
-          </li>
-          <li class="w3-padding-16">
-            <p>
-                This is another VR project done with me and Max. this one starts with the character wandering around an empty
-              city. After a bit, the character is transported to an empty rooms style maze that you need to escape. The enemies
-               follow an a* path to random points on the maze. This allows them to wander about the maze.
-            </p>
-            <p>
-                I took care of the city building and landscape. I used multiple modular asset packs for the buildings,
-              houses and the outdoor stage. I also used an ambient city sounds asset pack for background
-              noise around the map.
-            </p>
-          </li>
-        </ul>
       </div>
     </div>
+  </section>
 
-    <!-- row for websites -->
-    <div class="w3-row-padding" style="margin:0 -16px">
+  <!-- ── PROJECTS ── -->
+  <section id="projects">
+    <div class="section">
+      <p class="section-label reveal">Work</p>
+      <h2 class="section-title reveal">My <em>Projects</em></h2>
+      <div class="divider reveal"></div>
 
-      
-        <div class="w3-half w3-margin-bottom">
-            <ul class="w3-ul w3-white w3-center">
-              <li class="w3-dark-grey w3-xlarge w3-padding-32">The Tax Raven</li>
-              <li class="w3-padding-16">
-                <iframe src="https://thetaxraven.com" width="100%" height="400">
-                </iframe>
-              </li>
-            </ul>
+      <!-- Swarmbot -->
+      <div class="project-feature reveal">
+        <div class="project-feature-media">
+          <img src="images/othello.gif" alt="Swarmbot playing Othello">
+        </div>
+        <div class="project-feature-body">
+          <span class="project-tag">AI Research</span>
+          <h3 class="project-title">Swarmbot</h3>
+          <p class="project-desc">A swarm intelligence system that competes at Othello using Monte Carlo Tree Search, ant colony optimization, firefly, and cuckoo bird metaheuristics. Agents adapt and evolve toward optimal game strategies.</p>
+          <div class="project-links">
+            <a href="https://github.com/theguy951357/swarmbot" target="_blank" class="btn btn-outline btn-sm">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="swarmbot/swarmbotresults.html" class="btn btn-primary btn-sm">
+              View Results
+            </a>
+            <a href="https://unca-urcap.org/ugr_journal.php?publication_static_id=4&forum_id=11" target="_blank" class="btn btn-outline btn-sm">
+              <i class="fa fa-book"></i> UNCA Journal
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- UE Projects -->
+      <div class="projects-grid stagger-children">
+        <div class="card">
+          <div class="card-video">
+            <iframe src="https://www.youtube.com/embed/l3KxFsieIXA?si=m9QZEkEmiO1Z_boY"
+              title="Crashed Ship UE project" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <div class="card-body">
+            <span class="project-tag">Unreal Engine · VR</span>
+            <h3 class="card-title">Crashed Ship</h3>
+            <p class="card-text">A collaborative VR mini-game built with Max Levine. Match colored gears to repair a cargo ship — then survive the crash landing. I designed the ship, sound effects, and background score using my own instruments in Pro Tools.</p>
+            <a href="https://github.com/theguy951357/Project2MaxChris" target="_blank" class="btn btn-outline btn-sm" style="margin-top:1rem">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
         </div>
 
-        <div class="w3-half w3-margin-bottom">
-            <ul class="w3-ul w3-white w3-center">
-              <li class="w3-dark-grey w3-xlarge w3-padding-32">Sacred Lotus Healing</li>
-              <li class="w3-padding-16">
-                <iframe src="https://sacredlotushealingvt.com/" width="100%" height="400">
-                </iframe>
-              </li>
-            </ul>
+        <div class="card">
+          <div class="card-video">
+            <iframe src="https://www.youtube.com/embed/Dmnfe9pQ4i0?si=hXtROJn-cFCRJkOG"
+              title="UE VR project" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <div class="card-body">
+            <span class="project-tag">Unreal Engine · VR</span>
+            <h3 class="card-title">Backrooms Maze</h3>
+            <p class="card-text">An empty city that dissolves into a liminal maze. Enemies use A* pathfinding to wander and pursue. I built the city landscape and environment using modular asset packs and ambient sound design.</p>
+            <a href="https://github.com/theguy951357/Project3MaxChris" target="_blank" class="btn btn-outline btn-sm" style="margin-top:1rem">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Web Projects -->
+      <p class="section-label reveal" style="margin-top: var(--space-lg)">Web Design</p>
+      <div class="web-grid stagger-children">
+        <div class="web-card">
+          <div class="web-card-label">Niki Foster</div>
+          <iframe src="https://nikifoster.com" title="Niki Foster website" loading="lazy"></iframe>
+          <div class="web-card-overlay">
+            <a href="https://nikifoster.com" target="_blank" class="btn btn-primary btn-sm">Visit Site</a>
+          </div>
         </div>
 
-        
-    <!-- End project grid -->
+        <div class="web-card">
+          <div class="web-card-label">Sacred Lotus Healing</div>
+          <iframe src="https://sacredlotushealingvt.com/" title="Sacred Lotus Healing" loading="lazy"></iframe>
+          <div class="web-card-overlay">
+            <a href="https://sacredlotushealingvt.com/" target="_blank" class="btn btn-primary btn-sm">Visit Site</a>
+          </div>
+        </div>
+      </div>
     </div>
-  <!-- End Portfolio Section -->
-  </div>
+  </section>
 
-  <!-- Contact Section -->
-  <div class="w3-padding-64 w3-content w3-text-khaki" id="contact">
-    <h2 class="w3-text-light-grey">Contact Me</h2>
-    <hr style="width:200px" class="w3-opacity">
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <div class="section contact-section reveal">
+      <p class="section-label">Contact</p>
+      <h2 class="section-title">Let's <em>Connect</em></h2>
+      <div class="divider"></div>
 
-    <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Canton, MA</p>
-      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: (203) 415-6873</p>
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: crispspiceguitar@gmail.com</p>
-      <p><a href="https://www.linkedin.com/in/christopher-blaha-5210b6a9/" target="_blank"><i class="fa fa-linkedin fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Linkedln</a></p>
-    </div><br>
-  <!-- End Contact Section -->
-  </div>
-  
-    <!-- Footer -->
-  <footer class="w3-content w3-padding-64 w3-text-light-grey">
-      <p>Made with <a href="http://imakewebthings.com/waypoints/" target="_blank">Waypoints</a></p>
-      <p>and <a href="https://www.curtainsjs.com/" target="_blank">curtainsjs</a></p>
-    
-  <!-- End footer -->
+      <div class="contact-grid">
+        <div class="contact-info stagger-children">
+          <div class="contact-item">
+            <i class="fa fa-map-marker-alt"></i>
+            <span>Canton, MA</span>
+          </div>
+          <div class="contact-item">
+            <i class="fa fa-phone"></i>
+            <a href="tel:+12034156873">(203) 415-6873</a>
+          </div>
+          <div class="contact-item">
+            <i class="fa fa-envelope"></i>
+            <a href="mailto:crispspiceguitar@gmail.com">crispspiceguitar@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/christopher-blaha-5210b6a9/" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <p>Built with <a href="https://www.curtainsjs.com/" target="_blank">curtains.js</a> &amp; <a href="http://imakewebthings.com/waypoints/" target="_blank">care</a></p>
+    <a href="./index.html">
+      <img src="./images/fulllogo_transparent.png" class="footer-logo" alt="CrispSpice Studios">
+    </a>
   </footer>
 
-<!-- END PAGE CONTENT -->
-</div>
-
-<ul class="notifications" id="notifications"></ul>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="./scripts/waypoints/lib/noframework.waypoints.min.js"></script>
-<script src="./scripts/headerpic.js" type="module"></script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const loadEl = document.querySelector('#load');
-      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-      // // The Firebase SDK is initialized and available here!
-      //
-      // firebase.auth().onAuthStateChanged(user => { });
-      // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-      // firebase.firestore().doc('/foo/bar').get().then(() => { });
-      // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-      // firebase.messaging().requestPermission().then(() => { });
-      // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-      // firebase.analytics(); // call to activate
-      // firebase.analytics().logEvent('tutorial_completed');
-      // firebase.performance(); // call to activate
-      //
-      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-      try {
-        let app = firebase.app();
-        let features = [
-          'auth', 
-          'database', 
-          'firestore',
-          'functions',
-          'messaging', 
-          'storage', 
-          'analytics', 
-          'remoteConfig',
-          'performance',
-        ].filter(feature => typeof app[feature] === 'function');
-        loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-      } catch (e) {
-        console.error(e);
-        loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-      }
-    });
-  </script>
-  
-  
+  <script src="./scripts/headerpic.js" type="module"></script>
+  <script src="./scripts/nav.js"></script>
 
 </body>
 </html>

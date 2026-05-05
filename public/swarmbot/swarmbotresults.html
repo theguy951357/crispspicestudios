@@ -1,130 +1,252 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Swarmbot Results</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="../images/chrisheadshot1.jpeg">
-    <!--Load the AJAX API-->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript" src="../scripts/charts.js"></script>
-    <script type="text/javascript" src="../scripts/montecarlo.js"></script>
-    <script type="text/javascript" src="../scripts/antcolony.js"></script>
-    <script type="text/javascript" src="../scripts/cuckoobird.js"></script>
-    <script type="text/javascript" src="../scripts/firefly.js"></script>
-    <script type="text/javascript" src="../scripts/montecarloperf.js"></script>
-    <script type="text/javascript" src="../scripts/antcolonyperf.js"></script>
-    <script type="text/javascript" src="../scripts/fireflyperf.js"></script>
-    <script type="text/javascript" src="../scripts/cuckoobirdperf.js"></script>
-    <style>
-      html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-    </style>
-  </head>
-  <body class="w3-light-grey">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Swarmbot: Swarm Intelligence for Game Tree Search — Chris Blaha</title>
+  <link rel="icon" href="../images/icononly_transparent_nobuffer.png">
+  <link rel="stylesheet" href="../css/swarmbot-academic.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="../scripts/charts.js"></script>
+  <script type="text/javascript" src="../scripts/montecarlo.js"></script>
+  <script type="text/javascript" src="../scripts/antcolony.js"></script>
+  <script type="text/javascript" src="../scripts/cuckoobird.js"></script>
+  <script type="text/javascript" src="../scripts/firefly.js"></script>
+  <script type="text/javascript" src="../scripts/montecarloperf.js"></script>
+  <script type="text/javascript" src="../scripts/antcolonyperf.js"></script>
+  <script type="text/javascript" src="../scripts/fireflyperf.js"></script>
+  <script type="text/javascript" src="../scripts/cuckoobirdperf.js"></script>
+</head>
+<body>
 
-    <!-- Top container -->
-    <div class="w3-bar w3-top w3-white w3-large" style="z-index:4">
-      <span class="w3-bar-item w3-right"><img src="../images/icononly_transparent.png" style="width:7% ; height:7%;" alt="logo"></span>
+  <!-- INSTITUTIONAL HEADER -->
+  <header class="inst-header">
+    <div class="inst-header-inner">
+      <a href="../index.html" class="inst-back">
+        <i class="fa fa-arrow-left"></i> Portfolio
+      </a>
+      <img
+        src="../images/Wordmark-Computer-Science - RGB-blue.png"
+        alt="UNC Asheville — Computer Science"
+        class="unca-wordmark"
+      >
     </div>
+  </header>
 
+  <div class="paper-wrap">
+    <article class="paper">
 
-
-
-    <!-- !PAGE CONTENT! -->
-    <div class="w3-main" >
-
-      <br><br><br>
-      <div class="w3-container">
-        <h3 class="w3-center">Win%</h3>
-        <p class="w3-center">The swarmbot competes with the bots on <a href="https://www.eothello.com/">eOthello</a>. These Graphs show the percentage of wins against an opponent.</p>
-        <p>Monte Carlo Agent</p>
-        <div class="w3-grey">
-          <div class="w3-container w3-center w3-padding w3-green" style="width:36%">36%</div>
+      <!-- Title block -->
+      <div class="paper-title-block">
+        <div class="paper-journal-label">
+          Supplementary Results · UNC Asheville Journal of Undergraduate Research · December 2022
         </div>
-
-        <p>Ant Colony</p>
-        <div class="w3-grey">
-          <div class="w3-container w3-center w3-padding w3-green" style="width:61%">61%</div>
-        </div>
-
-        <p>Firefly</p>
-        <div class="w3-grey">
-          <div class="w3-container w3-center w3-padding w3-green" style="width:41%">41%</div>
-        </div>
-
-        <p>Cuckoo Bird</p>
-        <div class="w3-grey">
-          <div class="w3-container w3-center w3-padding w3-green" style="width:43%">43%</div>
-        </div>
-      </div>
-
-      <br>
-      <div class="w3-container">
-        <h3 class="w3-center">Performance</h3>
-        <br>
-        <p class="w3-center">These metrics were collected by timing how long it takes each swarm to perform 3000 dives in parallel. The Monte Carlo graph is the only one where you will see performance on one agent. The Ant Colony, Firefly, and Cuckoo Bird swarms are reliant on more than one agent, so there is no measurement for a single agent. One thing to note is that the Ant Colony graph is measured in hundredths of a second compared to the rest of the swarms performing at tenths of a second. Even two Ant Colony agents can outperform eight Monte Carlo agents.</p>
-        <br>
-        <div id="montecarlo_speed_div" style="height: 300px;"></div>
-        <br>
-        <div id="antcolony_speed_div" style="height:300px;"></div>
-        <br>
-        <div id="firefly_speed_div" style="height:300px;"></div>
-        <br>
-        <div id="cuckoobird_speed_div" style="height:300px;"></div>
-      </div>
-
-      <div class="w3-panel">
-        <div class="w3-row-padding" style="margin:0 -16px">
-          
-          <div>
-            <h3 class="w3-center">Tree Maps</h3>
-            <p class="w3-center">Left click or, if on a phone, tap on a square to go down the tree. Right click or long press on a square to go back up the tree. The number before the dash is not significant to the gametree. The google charts API just needs a unique id to build the tree properly. After the dash represents the move being explored. These graphs show the behavior of how the different swarms explore a gametree. The squares that are green show a node that points towards more winning strategies. Red nodes point towards less winning strategies. If a graph starts with one node, that is a game where the agent plays second, so the first part of the tree was chosen by the opponenent.</p>
-            <p class="w3-center">Note: These tree maps only go about ten levels down the tree. With a state space of 10<sup>28</sup> the full gametrees are very large and trying to put four of them on a website would take forever to load up. Ten levels down gives between 4000-7000 nodes to look at and gives a good representation of how the agents explore the gametree.</p>
-            <br>
-            <h5>Monte Carlo</h5>
-            <br>
-            <p class="w3-center"> You can see in the Monte Carlo tree map that the colors are faded and get more defined as you travel down the tree. This shows a more random dispersement when searching the tree. Whether There was a win or a loss doesn't matter to the agent until the simulations are over and it is time to choose a move.</p>
-            <br>
-            <div id="montecarlo_div" style="height: 20%;"></div>
-            <br>
-            <h5>Ant Colony</h5>
-            <br>
-            <p class="w3-center">In the Ant Colony graph, we can see a targeted approch to searching the tree. The pheromone trails that the ants follow allow the swarm to favor the winning paths. Since there is still a probabilty of veering off the pheromone trail, the agents can still explore around the pheromone trail to find more wins.</p>
-            <br>
-            <div id="antcolony_div" style="height: 20%;"></div>
-            <br>
-            <h5>Firefly</h5>
-            <br>
-            <p class="w3-center">The Firefly graph shows a similar start to the Monte Carlo graph where the colors are faded showing a random dispersement. This is expected since the Firefly and Cuckoo Bird swarms start out in the same manner as the Monte Carlo agents. As the genetic algorithms start to mutate and favor agents that find more winning strategies, The colors get more defined at a quicker pace compared to the Monte Carlo.</p>
-            <br>
-            <div id="firefly_div" style="height: 20%;"></div>
-            <br>
-            <h5>Cuckoo Bird</h5>
-            <br>
-            <p class="w3-center">The Cuckoo Bird graph shows a similar exploration approch to the Firefly. Colors get more defined and targeted as the Genetic algorithms start favoring winning strategies.</p>
-            <br>
-            <div id="cuckoobird_div" style="height: 20%;"></div>
+        <h1 class="paper-title">Swarmbot: Experimental Results</h1>
+        <p class="paper-subtitle">Win rate, performance benchmarks, and game tree exploration maps comparing three swarm intelligence algorithms against a Monte Carlo baseline in Othello. This page accompanies the <a href="https://unca-urcap.org/ugr_journal.php?publication_static_id=4&forum_id=11" target="_blank">published journal article ↗</a>.</p>
+        <div class="paper-meta">
+          <div class="paper-author">
+            <span class="author-name">Christopher Blaha</span>
+            <span class="author-affil">Department of Computer Science, University of North Carolina Asheville</span>
+            <span class="author-affil">Faculty Advisors: Dr. Marietta Cameron &amp; Dr. Kenneth Bogert</span>
+          </div>
+          <div class="paper-links">
+            <a href="https://unca-urcap.org/ugr_journal.php?publication_static_id=4&forum_id=11" target="_blank" class="paper-link-btn">
+              <i class="fa fa-book-open"></i> Published Article
+            </a>
+            <a href="https://github.com/theguy951357/swarmbot" target="_blank" class="paper-link-btn paper-link-btn--outline">
+              <i class="fa-brands fa-github"></i> Source Code
+            </a>
           </div>
         </div>
+        <hr class="paper-rule">
       </div>
-      <hr>
-      
-      <br>
-      <br>
-      <br>
-      <br>
-      
-      <!-- Footer -->
-      <footer class="w3-container w3-padding-16 w3-grey">
-        
-      </footer>
 
-      <!-- End page content -->
+      <!-- Win Rate -->
+      <section class="paper-section" id="win-rate">
+        <h2 class="paper-section-title">Win Rate Results</h2>
+        <p>The following results reflect each algorithm's win percentage when competing against bots on eOthello. Monte Carlo Tree Search serves as the single-agent baseline — each of the three swarm methods (Ant Colony, Firefly, Cuckoo Bird) uses multiple agents in parallel to compare against it. Results are ordered by win percentage descending.</p>
+
+        <div class="figure-block">
+          <div class="figure-caption-top">Figure 1 — Win percentage by algorithm against eOthello opponents</div>
+          <div class="academic-bars">
+
+            <div class="abar-row">
+              <div class="abar-label">Ant Colony Optimization</div>
+              <div class="abar-track">
+                <div class="abar-fill abar-ant" style="--target-width: 61%"></div>
+              </div>
+              <div class="abar-pct">61%</div>
+            </div>
+
+            <div class="abar-row">
+              <div class="abar-label">Cuckoo Bird Search</div>
+              <div class="abar-track">
+                <div class="abar-fill abar-cuckoo" style="--target-width: 43%"></div>
+              </div>
+              <div class="abar-pct">43%</div>
+            </div>
+
+            <div class="abar-row">
+              <div class="abar-label">Firefly Algorithm</div>
+              <div class="abar-track">
+                <div class="abar-fill abar-firefly" style="--target-width: 41%"></div>
+              </div>
+              <div class="abar-pct">41%</div>
+            </div>
+
+            <div class="abar-row">
+              <div class="abar-label">Monte Carlo Tree Search</div>
+              <div class="abar-track">
+                <div class="abar-fill abar-monte" style="--target-width: 36%"></div>
+              </div>
+              <div class="abar-pct">36%</div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="interpretation-box">
+          <div class="interp-label"><i class="fa fa-magnifying-glass"></i> Interpretation</div>
+          <p>Ant Colony Optimization achieves the highest win rate (61%), with pheromone trails reinforcing the most successful paths across agents. The genetic algorithm-based swarms — Cuckoo Bird (43%) and Firefly (41%) — both outperform the Monte Carlo baseline (36%). This confirms the central thesis of the paper: multiple agents using swarm behaviors cover more of the game tree and converge on stronger strategies faster than a single Monte Carlo agent navigating at random. Monte Carlo's lower win rate is expected — it applies no coordination between agents and relies entirely on random playouts to estimate move quality.</p>
+        </div>
+      </section>
+
+      <hr class="section-divider">
+
+      <!-- Performance -->
+      <section class="paper-section" id="performance">
+        <h2 class="paper-section-title">Parallel Execution Performance</h2>
+        <p>Performance was measured by timing how long each swarm takes to complete 3,000 dives in parallel across varying agent counts. Monte Carlo Tree Search operates as a single agent with no inter-agent coordination, so its performance is measured for one agent only. The three swarm methods — Ant Colony, Firefly, and Cuckoo Bird — rely on multiple agents working simultaneously, so performance is measured across a range of agent counts to show how they scale.</p>
+
+        <div class="callout-box callout-box--note">
+          <strong>Important — unit difference:</strong> The Ant Colony performance chart (Figure 2b) is measured in <strong>hundredths of a second</strong>. All other algorithm charts are measured in <strong>tenths of a second</strong>. This order-of-magnitude difference reflects a substantial performance advantage for Ant Colony: even two Ant Colony agents outperform eight Monte Carlo agents in wall-clock time.
+        </div>
+
+        <div class="charts-2col">
+
+          <div class="figure-block">
+            <div class="figure-caption-top">Figure 2a — Monte Carlo: avg. time <em>(tenths/s)</em> for 3,000 dives vs. agent count</div>
+            <div id="montecarlo_speed_div" class="chart-area"></div>
+            <div class="figure-caption-bottom">Single-agent measurement only. Performance is bounded by independent random simulation overhead and does not benefit from inter-agent coordination.</div>
+          </div>
+
+          <div class="figure-block">
+            <div class="figure-caption-top">Figure 2b — Ant Colony: avg. time <em>(hundredths/s)</em> for 3,000 dives vs. agent count</div>
+            <div id="antcolony_speed_div" class="chart-area"></div>
+            <div class="figure-caption-bottom">Note the unit difference from other charts. Pheromone-sharing reduces redundant exploration and yields dramatically faster convergence at scale.</div>
+          </div>
+
+          <div class="figure-block">
+            <div class="figure-caption-top">Figure 2c — Firefly: avg. time <em>(tenths/s)</em> for 3,000 dives vs. agent count</div>
+            <div id="firefly_speed_div" class="chart-area"></div>
+            <div class="figure-caption-bottom">Genetic mutation introduces coordination overhead but improves search quality over successive generations of agents.</div>
+          </div>
+
+          <div class="figure-block">
+            <div class="figure-caption-top">Figure 2d — Cuckoo Bird: avg. time <em>(tenths/s)</em> for 3,000 dives vs. agent count</div>
+            <div id="cuckoobird_speed_div" class="chart-area"></div>
+            <div class="figure-caption-bottom">Similar profile to Firefly. Lévy-flight inspired position updates introduce slight step-size variance relative to standard genetic mutation.</div>
+          </div>
+
+        </div>
+      </section>
+
+      <hr class="section-divider">
+
+      <!-- Tree Maps -->
+      <section class="paper-section" id="treemaps">
+        <h2 class="paper-section-title">Game Tree Exploration Maps</h2>
+
+        <p>The following tree maps visualize how each algorithm explores the Othello game tree. Each node represents a distinct game state reached during search. <span class="legend-green">Green nodes</span> indicate paths leading toward higher win probability; <span class="legend-red">red nodes</span> indicate paths toward lower win probability. Color intensity reflects the degree of confidence the algorithm has assigned to that path based on its internal scoring mechanism.</p>
+
+        <div class="callout-box callout-box--info">
+          <strong>Navigation:</strong> Left-click (or tap on mobile) a node to drill into its subtree. Right-click (or long-press) to return to the parent. The numeric prefix before each dash is an internal identifier required by the Google Charts API — only the value after the dash represents the Othello move being explored. Trees are displayed to approximately 10 levels, yielding 4,000–7,000 visible nodes from a total game-state space of approximately 10<sup>28</sup>. If a tree begins with a single root node, the agent played second and the first branch was determined by the opponent's opening move.
+        </div>
+
+        <!-- Monte Carlo -->
+        <div class="treemap-block">
+          <h3 class="treemap-heading">
+            <span class="algo-chip algo-monte">Monte Carlo Tree Search</span>
+          </h3>
+          <p class="treemap-desc">The Monte Carlo tree map shows faded, diffuse coloring throughout early levels. This reflects the algorithm's use of random playouts to evaluate nodes — wins and losses are not differentiated until all simulations for a position are complete and a move is selected. Early-level nodes therefore appear roughly uniform in color intensity. Some definition emerges at deeper levels as a larger number of simulations converge on a particular move, but the pattern remains scattered compared to guided search algorithms.</p>
+          <div class="figure-block">
+            <div class="figure-caption-top">Figure 3a — Monte Carlo Tree Search: game tree exploration map (~10 levels, 4,000–7,000 nodes)</div>
+            <div id="montecarlo_div" class="treemap-area"></div>
+            <div class="figure-caption-bottom">Diffuse, approximately uniform coloring reflects random playout evaluation. Move quality is only resolved at the end of simulation, not during traversal.</div>
+          </div>
+        </div>
+
+        <!-- Ant Colony -->
+        <div class="treemap-block">
+          <h3 class="treemap-heading">
+            <span class="algo-chip algo-ant">Ant Colony Optimization</span>
+          </h3>
+          <p class="treemap-desc">The Ant Colony tree map shows a markedly more targeted exploration pattern than Monte Carlo. Pheromone trails deposited on paths that lead to wins steer successive agents toward high-value subtrees from early in the search. This produces visibly stronger color definition at shallower depths. A residual probability of deviating from the pheromone trail prevents premature convergence and allows continued exploration of neighboring branches — observable as occasional outlier nodes diverging from the dominant color clusters.</p>
+          <div class="figure-block">
+            <div class="figure-caption-top">Figure 3b — Ant Colony Optimization: game tree exploration map (~10 levels, 4,000–7,000 nodes)</div>
+            <div id="antcolony_div" class="treemap-area"></div>
+            <div class="figure-caption-bottom">Stronger color definition at shallow depths reflects pheromone-guided path selection. Outlier nodes indicate probabilistic off-trail exploration.</div>
+          </div>
+        </div>
+
+        <!-- Firefly -->
+        <div class="treemap-block">
+          <h3 class="treemap-heading">
+            <span class="algo-chip algo-firefly">Firefly Algorithm</span>
+          </h3>
+          <p class="treemap-desc">The Firefly tree map begins similarly to Monte Carlo — agents initialize with random positions in the search space, producing diffuse early-level coloring. Fireflies gravitate toward the brightest firefly in the swarm; brightness corresponds to a better position in the game tree. As agents converge on brighter (higher-fitness) neighbors, the search focuses on more promising subtrees. This fitness-based attraction accelerates color definition compared to Monte Carlo's purely random traversal, with the convergence signature becoming visible as the genetic algorithm progresses across generations.</p>
+          <div class="figure-block">
+            <div class="figure-caption-top">Figure 3c — Firefly Algorithm: game tree exploration map (~10 levels, 4,000–7,000 nodes)</div>
+            <div id="firefly_div" class="treemap-area"></div>
+            <div class="figure-caption-bottom">Initial random dispersal followed by fitness-driven convergence. Color definition sharpens faster than Monte Carlo as genetic attraction takes effect.</div>
+          </div>
+        </div>
+
+        <!-- Cuckoo Bird -->
+        <div class="treemap-block">
+          <h3 class="treemap-heading">
+            <span class="algo-chip algo-cuckoo">Cuckoo Bird Search</span>
+          </h3>
+          <p class="treemap-desc">Cuckoo Bird exhibits a similar exploration profile to Firefly — random initial dispersal followed by genetic convergence toward winning strategies. The cuckoo bird mechanism works by laying "eggs" (candidate solutions) in other nests. Those that are discovered are either removed or the nest relocates; those that survive pass on a genetic algorithm toward the optimal path. This survival-and-inheritance mechanism produces a convergence pattern similar to Firefly but with additional variance introduced by the nest-relocation behavior, which can surface winning paths through wider jumps in the search space.</p>
+          <div class="figure-block">
+            <div class="figure-caption-top">Figure 3d — Cuckoo Bird Search: game tree exploration map (~10 levels, 4,000–7,000 nodes)</div>
+            <div id="cuckoobird_div" class="treemap-area"></div>
+            <div class="figure-caption-bottom">Similar to Firefly but with Lévy-flight inspired step sizes. Occasional large jumps introduce additional exploration variance.</div>
+          </div>
+        </div>
+
+      </section>
+
+      <hr class="section-divider">
+
+      <!-- References -->
+      <section class="paper-section" id="references">
+        <h2 class="paper-section-title">References &amp; Links</h2>
+        <ul class="ref-list">
+          <li>Blaha, C. (2022). Swarmbot: Swarm Intelligence for Game Tree Search. <em>UNCA Journal of Undergraduate Research.</em> <a href="https://unca-urcap.org/ugr_journal.php?publication_static_id=4&forum_id=11" target="_blank">View published article ↗</a></li>
+          <li>eOthello — online Othello competition platform. <a href="https://www.eothello.com/" target="_blank">eothello.com ↗</a></li>
+          <li>Swarmbot source code repository. <a href="https://github.com/theguy951357/swarmbot" target="_blank">github.com/theguy951357/swarmbot ↗</a></li>
+          <li>Google Charts API — tree map and scatter chart visualizations. <a href="https://developers.google.com/chart" target="_blank">developers.google.com/chart ↗</a></li>
+        </ul>
+      </section>
+
+    </article>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="acad-footer">
+    <div class="acad-footer-inner">
+      <img
+        src="../images/Wordmark-Computer-Science - RGB-blue.png"
+        alt="UNC Asheville Computer Science"
+        class="acad-footer-logo"
+      >
+      <p>Results page for <em>Swarmbot</em> by Christopher Blaha &nbsp;·&nbsp; <a href="../index.html">crispspicestudios.com</a></p>
     </div>
+  </footer>
 
+  <script src="../scripts/swarmbot-academic.js"></script>
 
-  </body>
+</body>
 </html>

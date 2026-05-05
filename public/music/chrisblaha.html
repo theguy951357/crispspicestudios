@@ -1,213 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Chris Blaha's Music Page</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="../images/icononly_transparent_nobuffer.png">
-<link rel="stylesheet" href="../css/w3.css">
-<link rel="stylesheet" href="../css/musicpagecanvas.css">
-<link rel="stylesheet" href="../css/musiccolors.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<style>
-/* body {font-family: "Lato", sans-serif} */
-.mySlides {display: none}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chris Blaha — Music</title>
+  <link rel="icon" href="../images/icononly_transparent_nobuffer.png">
+  <link rel="stylesheet" href="../css/modern.css">
+  <link rel="stylesheet" href="../css/musicpagecanvas.css">
+  <link rel="stylesheet" href="../css/music.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- TikTok embed — loaded once -->
+  <script async src="https://www.tiktok.com/embed.js"></script>
 </head>
 <body>
 
-<!-- Navbar -->
-<div class="w3-top" style="z-index: 100;">
-  <div class="w3-bar w3-2021-mint w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ME</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MY MUSIC</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-    </div>
-  </div>
-</div>
+  <!-- ── SHARED NAV ── -->
+  <nav class="site-nav">
+    <a href="../index.html">
+      <img src="../images/fulllogo_transparent.png" class="nav-logo" alt="CrispSpice Studios">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Portfolio</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-2021-mint w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px; z-index: 100;">
-  <a href="#band" class="w3-bar-item w3-2021-mint w3-button w3-padding-large" onclick="myFunction()">ME</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-2021-mint w3-padding-large" onclick="myFunction()">MY MUSIC</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-2021-mint w3-padding-large" onclick="myFunction()">CONTACT</a>
-</div>
-
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
-<div id="canvas"></div>
-
-<div id="content">
-
-  <div id="planes">
-
-    <div class="plane-wrapper">
-      <span class="plane-title">CHRIS BLAHA</span>
-      <div class="plane-inner">
-        <div class="plane">
-          <img src="../images/chrismusic/chrismusician3.jpg" crossorigin="" data-sampler="planeTexture" />
-        </div>
-      </div>
-    </div>
-
-    <div class="plane-wrapper">
-      <span class="plane-title">CRAFTING MOMENTS THAT RESONATE</span>
-      <div class="plane-inner">
-        <div class="plane">
-          <img src="../images/chrismusic/chrisguitar.jpg" crossorigin="" data-sampler="planeTexture" />
-        </div>
-      </div>
-    </div>
-
-    <div class="plane-wrapper">
-      <span class="plane-title">A JOURNEY OF SOUND AND STORYTELLING</span>
-      <div class="plane-inner">
-        <div class="plane">
-          <img src="../images/chrismusic/chrisguitar2.jpg" crossorigin="" data-sampler="planeTexture" />
-        </div>
-      </div>
-    </div>
-
-  
-
+  <div class="nav-mobile">
+    <ul>
+      <li><a href="../index.html">← Portfolio</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </div>
 
-  </div>
-  
-  </div>
+  <!-- ── CURTAINS CANVAS HERO (preserved from original) ── -->
+  <div class="w3-content" style="max-width:2000px;">
+    <div id="canvas"></div>
 
-  <!-- The Band Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-    
-    <p class="w3-justify">Music has always been an integral part of my life, blending creativity and expression with a deep sense of connection. I’m a guitarist and songwriter who finds joy in crafting melodies that resonate with perseverance, strength, and resilience. Drawing inspiration from various artists and my own life experiences, I aim to create music that tells a story and stirs emotion.</p>
+    <div id="content">
+      <div id="planes">
 
-    <p class="w3-justify">My musical journey has been shaped by both formal education and personal exploration. I studied music for four years at Northern Vermont University and earned a minor in music from the University of North Carolina Asheville. These experiences deepened my understanding of music theory, composition, and performance, providing me with a strong foundation to experiment across genres and styles.</p>
-      
-    <p class="w3-justify">Whether I’m working on a dynamic guitar solo, or refining lyrics that linger in the listener’s mind, I approach every note with passion and purpose. Music isn’t just a hobby for me; it’s a way of life. I believe in its power to heal, inspire, and bring people together.</p>
-      
-      <p class="w3-justify">Whether you’re here to listen to my latest track, collaborate on a project, or simply share in the love of music, welcome to my creative journey.</p>
-    
-  </div>
-
-  <!-- The Tour Section -->
-  <div class="w3-2021-cerulean fix-links" id="tour">
-    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-      <h2 class="w3-wide w3-center">My Music</h2>
-      <p class="w3-opacity w3-center"><i>Streaming on Spotify, Apple Music, iTunes, Instagram/Facebook, TikTok & other ByteDance stores, YouTube Music, Amazon, Pandora, Deezer, Tidal, iHeartRadio, Claro Música, Saavn, Boomplay, Anghami, NetEase, Tencent, Qobuz, Joox, Kuack Media, Adaptr, Flo, MediaNet</i></p><br>
-
-  
-
-      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-        </div>
-        <div class="w3-half  w3-margin-bottom w3-border w3-card">
-          <div class="w3-container w3-round w3-white">
-            <p><b>TROCK Reprise</b></p>
-            <a href="https://distrokid.com/hyperfollow/chrisblaha/trock-reprise/" style="z-index: 100; width:80%;"><button class="w3-button w3-2021-raspberry-sorbet">LISTEN HERE!</button></a>
-            <blockquote class="tiktok-embed w3-margin-right" cite="https://www.tiktok.com/@christopher.blaha5/video/7465511115171302702" data-video-id="7465511115171302702" data-embed-from="embed_page" style="max-width:605px; min-width:325px;"> <section> <a target="_blank" title="@christopher.blaha5" href="https://www.tiktok.com/@christopher.blaha5?refer=embed">@christopher.blaha5</a> <p><a title="musicislife" target="_blank" href="https://www.tiktok.com/tag/musicislife?refer=embed">#MusicIsLife</a> <a title="musiclover" target="_blank" href="https://www.tiktok.com/tag/musiclover?refer=embed">#MusicLover</a> <a title="musictherapy" target="_blank" href="https://www.tiktok.com/tag/musictherapy?refer=embed">#MusicTherapy</a> <a title="escapewithmusic" target="_blank" href="https://www.tiktok.com/tag/escapewithmusic?refer=embed">#EscapeWithMusic</a> <a title="soundtrackoflife" target="_blank" href="https://www.tiktok.com/tag/soundtrackoflife?refer=embed">#SoundtrackOfLife</a> <a title="pov" target="_blank" href="https://www.tiktok.com/tag/pov?refer=embed">#POV</a> <a title="relatable" target="_blank" href="https://www.tiktok.com/tag/relatable?refer=embed">#Relatable</a> <a title="healingthroughmusic" target="_blank" href="https://www.tiktok.com/tag/healingthroughmusic?refer=embed">#healingThroughMusic</a> <a title="musicescape" target="_blank" href="https://www.tiktok.com/tag/musicescape?refer=embed">#MusicEscape</a> <a title="emotionalescape" target="_blank" href="https://www.tiktok.com/tag/emotionalescape?refer=embed">#EmotionalEscape</a> <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#FYP</a> <a title="foryoupage" target="_blank" href="https://www.tiktok.com/tag/foryoupage?refer=embed">#ForYouPage</a> <a title="viral" target="_blank" href="https://www.tiktok.com/tag/viral?refer=embed">#Viral</a> <a title="trendingnow" target="_blank" href="https://www.tiktok.com/tag/trendingnow?refer=embed">#TrendingNow</a> <a title="tiktoktrend" target="_blank" href="https://www.tiktok.com/tag/tiktoktrend?refer=embed">#TikTokTrend</a></p> <a target="_blank" title="♬ TROCK Reprise - Chris Blaha" href="https://www.tiktok.com/music/TROCK-Reprise-7442046537146337297?refer=embed">♬ TROCK Reprise - Chris Blaha</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
-            <p>TROCK Reprise is a dynamic reimagining of a track originally crafted with my old band, <a href="https://soundcloud.com/buddhagift" target="_blank">Buddha Gift</a>. This version breathes new life into the song, blending its nostalgic roots with a modern twist. With soaring guitar riffs and a powerful arrangement, "TROCK Reprise" captures the essence of growth, resilience, and rediscovery. </p>
-
-              <p>The reimagined arrangement brings a richer and fuller sound, layering intricate guitar work and dynamic rhythms that add depth and emotion to the track.</p>
-              
-              <p>"TROCK Reprise" is more than just a remaster. it’s a story of evolution. It reflects not only the growth of the song itself but also the journey of the musician behind it. It’s a tribute to the creative spirit of the past while fully embracing the possibilities of the present and future. For listeners, it offers a mix of nostalgia and excitement, a reminder of where it all began and a bold step into what’s yet to come.</p>
-              
-          </div>
-        </div>
-        <div class="w3-half w3-margin-bottom w3-border w3-card">
-          <div class="w3-container w3-round w3-white">
-            <p><b>Sonata Thing to Worry About</b></p>
-            <a href="https://distrokid.com/hyperfollow/chrisblaha/sonata-thing-to-worry-about"><button class="w3-button w3-2021-raspberry-sorbet">LISTEN HERE!</button></a>
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@christopher.blaha5/video/7469515714102349102" data-video-id="7469515714102349102" data-embed-from="embed_page" style="max-width:605px; min-width:325px;"> <section> <a target="_blank" title="@christopher.blaha5" href="https://www.tiktok.com/@christopher.blaha5?refer=embed">@christopher.blaha5</a> <p><a title="creatorsearchinsights" target="_blank" href="https://www.tiktok.com/tag/creatorsearchinsights?refer=embed">#creatorsearchinsights</a>  <a title="classicalmusic" target="_blank" href="https://www.tiktok.com/tag/classicalmusic?refer=embed">#ClassicalMusic</a> <a title="originalcomposition" target="_blank" href="https://www.tiktok.com/tag/originalcomposition?refer=embed">#OriginalComposition</a> <a title="composerlife" target="_blank" href="https://www.tiktok.com/tag/composerlife?refer=embed">#ComposerLife</a> <a title="musiclover" target="_blank" href="https://www.tiktok.com/tag/musiclover?refer=embed">#MusicLover</a> <a title="instrumental" target="_blank" href="https://www.tiktok.com/tag/instrumental?refer=embed">#Instrumental</a> <a title="musicianlife" target="_blank" href="https://www.tiktok.com/tag/musicianlife?refer=embed">#MusicianLife</a></p> <a target="_blank" title="♬ Sonata Thing to Worry About - Chris Blaha" href="https://www.tiktok.com/music/Sonata-Thing-to-Worry-About-7452938170885851153?refer=embed">♬ Sonata Thing to Worry About - Chris Blaha</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
-            <p>Sonata Thing to Worry About began as a melodic experiment on Noteflight, drawing inspiration from the graceful structure of a traditional sonata. As the composition developed, I felt it needed something more—an energy to bring it to life—so I layered in dynamic drum arrangements to give the piece a modern edge.</p>
-
-              <p>The track weaves together the elegance of its roots with the bold intensity of percussion, creating a journey that moves from gentle, reflective passages to vibrant, rhythmic peaks. The interplay between the melodies and the driving drums transforms the song into something both timeless and contemporary.</p>
-              
-              <p>"Sonata Thing to Worry About" captures the joy of blending tradition with innovation, resulting in a piece that feels fresh yet familiar. It’s a celebration of creativity and the ways music can evolve.</p>
-              
-              </p>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  
-
-  <!-- The Contact Section -->
-  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
-    <h2 class="w3-wide w3-center">CONTACT</h2>
-    <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
-    <div class="w3-row w3-padding-32">
-      <div class="w3-col m6 w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker" style="width:30px"></i> Canton, MA, US<br>
-        <i class="fa fa-phone" style="width:30px"></i> Phone: (203) 415-6873<br>
-        <i class="fa fa-envelope" style="width:30px"> </i> Email: crispspiceguitar@gmail.com<br>
-      </div>
-      <div class="w3-col m6">
-        <!-- <form action="/action_page.php" target="_blank">
-          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-            </div>
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+        <div class="plane-wrapper">
+          <span class="plane-title">CHRIS BLAHA</span>
+          <div class="plane-inner">
+            <div class="plane">
+              <img src="../images/chrismusic/chrismusician3.jpg" crossorigin="" data-sampler="planeTexture" />
             </div>
           </div>
-          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
-        </form> -->
+        </div>
+
+        <div class="plane-wrapper">
+          <span class="plane-title">CRAFTING MOMENTS THAT RESONATE</span>
+          <div class="plane-inner">
+            <div class="plane">
+              <img src="../images/chrismusic/chrisguitar.jpg" crossorigin="" data-sampler="planeTexture" />
+            </div>
+          </div>
+        </div>
+
+        <div class="plane-wrapper">
+          <span class="plane-title">A JOURNEY OF SOUND AND STORYTELLING</span>
+          <div class="plane-inner">
+            <div class="plane">
+              <img src="../images/chrismusic/chrisguitar2.jpg" crossorigin="" data-sampler="planeTexture" />
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-  
-<!-- End Page Content -->
-</div>
 
+  <!-- ── ABOUT ── -->
+  <section id="about" class="music-about fix-links">
+    <div class="section">
+      <p class="section-label reveal">The Artist</p>
+      <h2 class="section-title reveal">About <em>Me</em></h2>
+      <div class="divider reveal"></div>
 
+      <div class="music-bio stagger-children">
+        <p>Music has always been an integral part of my life, blending creativity and expression with a deep sense of connection. I'm a guitarist and songwriter who finds joy in crafting melodies that resonate with perseverance, strength, and resilience.</p>
+        <p>My musical journey has been shaped by both formal education and personal exploration. I studied music for four years at Northern Vermont University and earned a minor in music from UNC Asheville — deepening my understanding of theory, composition, and performance.</p>
+        <p>Whether I'm working on a dynamic guitar solo or refining lyrics that linger in the listener's mind, I approach every note with passion and purpose. Music isn't just a hobby; it's a way of life — a way to heal, inspire, and bring people together.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- ── MUSIC / RELEASES ── -->
+  <section id="music" class="music-releases fix-links">
+    <div class="section">
+      <p class="section-label reveal">Releases</p>
+      <h2 class="section-title reveal">My <em>Music</em></h2>
+      <div class="divider reveal"></div>
+      <p class="music-streaming reveal">
+        Streaming on Spotify, Apple Music, YouTube Music, Amazon, Pandora, Tidal, TikTok, iHeartRadio, Deezer &amp; more.
+      </p>
 
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge fix-links">
-  <!-- <i class="fa-brands fa-facebook w3-hover-opacity"></i>
-  <i class="fa-brands fa-instagram w3-hover-opacity"></i>
-  <i class="fa-brands fa-snapchat w3-hover-opacity"></i> -->
-  <a href="https://www.tiktok.com/@christopher.blaha5"><i class="fa-brands fa-tiktok w3-hover-opacity"></i></a>
-  <p class="w3-medium">Powered by <img src="../images/fulllogo_transparent_nobuffer.png" height="50px"></a></p>
-</footer>
+      <div class="releases-grid stagger-children">
 
-<script src="../scripts/musicpage.js" type="module"></script>
+        <!-- TROCK Reprise -->
+        <div class="release-card">
+          <div class="release-tiktok">
+            <blockquote class="tiktok-embed"
+              cite="https://www.tiktok.com/@christopher.blaha5/video/7465511115171302702"
+              data-video-id="7465511115171302702"
+              data-embed-from="embed_page"
+              style="max-width:605px;min-width:280px;">
+              <section>
+                <a target="_blank" title="@christopher.blaha5" href="https://www.tiktok.com/@christopher.blaha5?refer=embed">@christopher.blaha5</a>
+                <a target="_blank" title="♬ TROCK Reprise - Chris Blaha" href="https://www.tiktok.com/music/TROCK-Reprise-7442046537146337297?refer=embed">♬ TROCK Reprise - Chris Blaha</a>
+              </section>
+            </blockquote>
+          </div>
+          <div class="release-body">
+            <h3 class="release-title">TROCK Reprise</h3>
+            <p class="release-desc">A dynamic reimagining of a track originally crafted with <a href="https://soundcloud.com/buddhagift" target="_blank">Buddha Gift</a>. Soaring guitar riffs and a fuller arrangement breathe new life into the original — a tribute to the past while stepping boldly into the future.</p>
+            <a href="https://distrokid.com/hyperfollow/chrisblaha/trock-reprise/" target="_blank" class="btn btn-coral">
+              <i class="fa fa-headphones"></i> Listen Now
+            </a>
+          </div>
+        </div>
 
-<script>
-// Automatic Slideshow - change image every 4 seconds
-//var myIndex = 0;
-//carousel();
+        <!-- Sonata Thing -->
+        <div class="release-card">
+          <div class="release-tiktok">
+            <blockquote class="tiktok-embed"
+              cite="https://www.tiktok.com/@christopher.blaha5/video/7469515714102349102"
+              data-video-id="7469515714102349102"
+              data-embed-from="embed_page"
+              style="max-width:605px;min-width:280px;">
+              <section>
+                <a target="_blank" title="@christopher.blaha5" href="https://www.tiktok.com/@christopher.blaha5?refer=embed">@christopher.blaha5</a>
+                <a target="_blank" title="♬ Sonata Thing to Worry About - Chris Blaha" href="https://www.tiktok.com/music/Sonata-Thing-to-Worry-About-7452938170885851153?refer=embed">♬ Sonata Thing to Worry About - Chris Blaha</a>
+              </section>
+            </blockquote>
+          </div>
+          <div class="release-body">
+            <h3 class="release-title">Sonata Thing to Worry About</h3>
+            <p class="release-desc">A melodic experiment that began on Noteflight — classical sonata structure energized by dynamic drum arrangements. The interplay between elegance and percussion creates a journey from reflective passages to vibrant rhythmic peaks.</p>
+            <a href="https://distrokid.com/hyperfollow/chrisblaha/sonata-thing-to-worry-about" target="_blank" class="btn btn-coral">
+              <i class="fa fa-headphones"></i> Listen Now
+            </a>
+          </div>
+        </div>
 
-// function carousel() {
-//   var i;
-//   var x = document.getElementsByClassName("mySlides");
-//   for (i = 0; i < x.length; i++) {
-//     x[i].style.display = "none";  
-//   }
-//   myIndex++;
-//   if (myIndex > x.length) {myIndex = 1}    
-//   x[myIndex-1].style.display = "block";  
-//   setTimeout(carousel, 4000);    
-// }
+      </div>
+    </div>
+  </section>
 
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="fix-links">
+    <div class="section">
+      <p class="section-label reveal">Get In Touch</p>
+      <h2 class="section-title reveal"><em>Contact</em></h2>
+      <div class="divider reveal"></div>
 
-</script>
+      <div class="contact-grid">
+        <div class="contact-info stagger-children">
+          <div class="contact-item">
+            <i class="fa fa-map-marker-alt"></i>
+            <span>Canton, MA, US</span>
+          </div>
+          <div class="contact-item">
+            <i class="fa fa-phone"></i>
+            <a href="tel:+12034156873">(203) 415-6873</a>
+          </div>
+          <div class="contact-item">
+            <i class="fa fa-envelope"></i>
+            <a href="mailto:crispspiceguitar@gmail.com">crispspiceguitar@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <i class="fa-brands fa-tiktok"></i>
+            <a href="https://www.tiktok.com/@christopher.blaha5" target="_blank">@christopher.blaha5</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer fix-links">
+    <p>Powered by</p>
+    <a href="../index.html">
+      <img src="../images/fulllogo_transparent.png" class="footer-logo" alt="CrispSpice Studios">
+    </a>
+  </footer>
+
+  <script src="../scripts/musicpage.js" type="module"></script>
+  <script src="../scripts/nav.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,120 @@
+/* ============================================
+   MUSIC.CSS — page-specific styles
+   ============================================ */
+
+/* Override musicpagecanvas.css plane-title to use design system color */
+.plane-title {
+    background: var(--teal) !important;
+    font-family: var(--font-display) !important;
+    letter-spacing: 0.08em;
+  }
+  
+  /* ── ABOUT ── */
+  
+  .music-about {
+    background: var(--ink);
+    border-top: 1px solid rgba(255,255,255,0.04);
+  }
+  
+  .music-bio {
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+  
+  .music-bio p {
+    font-size: 1rem;
+    color: rgba(245,240,232,0.65);
+    line-height: 1.85;
+  }
+  
+  /* ── RELEASES ── */
+  
+  .music-releases {
+    background: #111;
+    border-top: 1px solid rgba(255,255,255,0.04);
+  }
+  
+  .music-streaming {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: var(--space-lg);
+    max-width: 600px;
+  }
+  
+  .releases-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+  
+  .release-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color var(--duration-med) var(--ease-out);
+  }
+  .release-card:hover {
+    border-color: rgba(0,124,122,0.3);
+  }
+  
+  .release-tiktok {
+    background: #000;
+    min-height: 400px;
+    display: flex;
+    align-items: stretch;
+  }
+  .release-tiktok blockquote {
+    width: 100% !important;
+    min-width: unset !important;
+    margin: 0 !important;
+  }
+  
+  .release-body {
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    flex: 1;
+  }
+  
+  .release-title {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--cream);
+    line-height: 1.2;
+  }
+  
+  .release-desc {
+    font-size: 0.875rem;
+    color: rgba(245,240,232,0.55);
+    line-height: 1.75;
+    flex: 1;
+  }
+  
+  .release-desc a {
+    color: var(--teal);
+    border-bottom: 1px solid rgba(0,124,122,0.3);
+    transition: border-color var(--duration-fast);
+  }
+  .release-desc a:hover { border-color: var(--teal); }
+  
+  /* ── CONTACT (reuse from modern.css, just add section bg) ── */
+  
+  #contact {
+    background: var(--ink-soft);
+    border-top: 1px solid rgba(255,255,255,0.04);
+  }
+  
+  /* ── RESPONSIVE ── */
+  
+  @media (max-width: 900px) {
+    .releases-grid { grid-template-columns: 1fr; }
+  }
