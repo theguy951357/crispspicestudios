@@ -37,7 +37,7 @@
      --duration-slow: 0.9s;
    
      /* --- Layout --- */
-     --nav-height: 64px;
+     --nav-height: 76px;
      --max-width:  1200px;
      --radius:     4px;
      --radius-lg:  12px;
@@ -99,12 +99,18 @@
    }
    
    .nav-logo {
-     height: 36px;
+     height: 52px;
      width: auto;
-     opacity: 0.9;
-     transition: opacity var(--duration-fast);
+     opacity: 0;
+     animation: logoEntry 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                 filter 0.2s ease;
    }
-   .nav-logo:hover { opacity: 1; }
+   .nav-logo:hover {
+     opacity: 1;
+     transform: translateY(-2px) scale(1.05);
+     filter: brightness(1.1);
+   }
    
    .nav-links {
      display: flex;
@@ -428,12 +434,37 @@
    }
    .site-footer a:hover { color: var(--teal); }
    .footer-logo {
-     height: 32px;
-     opacity: 0.5;
+     height: 52px;
+     opacity: 0;
      margin: var(--space-sm) auto 0;
-     transition: opacity var(--duration-fast);
+     animation: logoEntry 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards,
+                logoFloat 5s ease-in-out 1s infinite;
+     transition: filter 0.2s ease;
    }
-   .footer-logo:hover { opacity: 0.8; }
+   .footer-logo:hover { filter: brightness(1.2); }
+   
+   @keyframes logoEntry {
+     from {
+       opacity: 0;
+       transform: translateY(14px) scale(0.95);
+     }
+     to {
+       opacity: 0.85;
+       transform: translateY(0) scale(1);
+     }
+   }
+   
+   @keyframes logoFloat {
+     0%, 100% { transform: translateY(0); }
+     50%       { transform: translateY(-7px); }
+   }
+   
+   @media (prefers-reduced-motion: reduce) {
+     .nav-logo, .footer-logo {
+       animation: none;
+       opacity: 0.85;
+     }
+   }
    
    /* ============================================
       SHARED NAV JS — inline scroll handler

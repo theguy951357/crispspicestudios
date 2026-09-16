@@ -3,7 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Chris Blaha</title>
+
+  <!-- Primary SEO -->
+  <title>Chris Blaha — Web Developer, Software Engineer & Web Designer | Canton, MA</title>
+  <meta name="description" content="Chris Blaha is a software engineer and freelance web developer based in Canton, MA. I build modern, fast websites and web applications for businesses — from landing pages to full-stack solutions. Also a guitarist and published AI researcher.">
+  <meta name="keywords" content="web developer Canton MA, freelance web designer Massachusetts, software engineer, web design services, landing page design, portfolio website, CRM integration, Chris Blaha, CrispSpice Studios">
+  <meta name="author" content="Christopher Blaha">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://crispspicestudios.com/">
+
+  <!-- Open Graph (Facebook, LinkedIn previews) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://crispspicestudios.com/">
+  <meta property="og:title" content="Chris Blaha — Web Developer & Software Engineer">
+  <meta property="og:description" content="Freelance web developer and software engineer based in Canton, MA. I build modern websites, landing pages, and web applications for businesses. Let's work together.">
+  <meta property="og:image" content="https://crispspicestudios.com/images/chrisheadshot1.jpeg">
+  <meta property="og:site_name" content="CrispSpice Studios">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Chris Blaha — Web Developer & Software Engineer">
+  <meta name="twitter:description" content="Freelance web developer and software engineer based in Canton, MA. Modern websites, landing pages, and web apps for businesses.">
+  <meta name="twitter:image" content="https://crispspicestudios.com/images/chrisheadshot1.jpeg">
+
+  <!-- Geo targeting -->
+  <meta name="geo.region" content="US-MA">
+  <meta name="geo.placename" content="Canton, Massachusetts">
+  <meta name="geo.position" content="42.1584;-71.1439">
+  <meta name="ICBM" content="42.1584, -71.1439">
+
+  <!-- Structured Data: Person + LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://crispspicestudios.com/#chris",
+        "name": "Christopher Blaha",
+        "url": "https://crispspicestudios.com",
+        "image": "https://crispspicestudios.com/images/chrisheadshot1.jpeg",
+        "sameAs": [
+          "https://www.linkedin.com/in/christopher-blaha-5210b6a9/",
+          "https://github.com/theguy951357",
+          "https://www.tiktok.com/@christopher.blaha5"
+        ],
+        "jobTitle": "Software Engineer & Web Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "MEDITECH"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Canton",
+          "addressRegion": "MA",
+          "addressCountry": "US"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of North Carolina Asheville"
+        },
+        "knowsAbout": [
+          "Web Development", "Software Engineering", "Go", "Docker",
+          "Electronic Health Records", "Swarm Intelligence", "Music"
+        ]
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://crispspicestudios.com/#business",
+        "name": "CrispSpice Studios",
+        "url": "https://crispspicestudios.com",
+        "logo": "https://crispspicestudios.com/images/fulllogo_transparent.png",
+        "image": "https://crispspicestudios.com/images/chrisheadshot1.jpeg",
+        "description": "Freelance web development and design services. Modern websites, landing pages, and web applications built for businesses.",
+        "founder": { "@id": "https://crispspicestudios.com/#chris" },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Canton",
+          "addressRegion": "MA",
+          "addressCountry": "US"
+        },
+        "telephone": "+12034156873",
+        "email": "crispspiceguitar@gmail.com",
+        "areaServed": ["Canton MA", "Massachusetts", "United States"],
+        "serviceType": [
+          "Web Design", "Web Development", "Landing Page Design",
+          "CRM Integration", "Software Engineering"
+        ],
+        "priceRange": "$$"
+      }
+    ]
+  }
+  </script>
+
   <link rel="icon" href="./images/icononly_transparent_nobuffer.png">
   <link rel="stylesheet" href="./css/modern.css">
   <link rel="stylesheet" href="./css/index.css">
@@ -13,9 +106,7 @@
 
   <!-- ── SHARED NAV ── -->
   <nav class="site-nav">
-    <a href="./index.html">
-      <img src="./images/fulllogo_transparent.png" class="nav-logo" alt="CrispSpice Studios">
-    </a>
+    <a href="./index.html" class="nav-logo-slot" aria-label="Home"></a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
@@ -47,7 +138,10 @@
       </div>
     </div>
 
+    <div class="particles" id="hero-particles"></div>
+
     <div class="hero-text">
+      <img src="./images/fulllogo_transparent.png" alt="CrispSpice Studios" class="hero-logo">
       <p class="hero-label reveal">Software Engineer · Web Developer · Musician</p>
       <h1 class="hero-name reveal">Chris<br>Blaha</h1>
       <div class="hero-actions reveal">
@@ -63,6 +157,7 @@
 
   <!-- ── ABOUT ── -->
   <section id="about">
+    <div class="particles" id="about-particles"></div>
     <div class="section">
       <p class="section-label reveal">Background</p>
       <h2 class="section-title reveal">About <em>Me</em></h2>
@@ -188,15 +283,18 @@
   <!-- ── CONTACT ── -->
   <section id="contact">
     <div class="section contact-section reveal">
-      <p class="section-label">Contact</p>
-      <h2 class="section-title">Let's <em>Connect</em></h2>
+      <p class="section-label">Hire Me</p>
+      <h2 class="section-title">Let's <em>Work Together</em></h2>
       <div class="divider"></div>
+      <p style="color:rgba(245,240,232,0.55);font-size:0.95rem;line-height:1.8;margin-bottom:var(--space-md);max-width:480px;">
+        Looking for a web developer or designer to build your next project? I work with businesses of all sizes — from landing pages and CRM integrations to full web applications. Based in Canton, MA, available remotely.
+      </p>
 
       <div class="contact-grid">
         <div class="contact-info stagger-children">
           <div class="contact-item">
             <i class="fa fa-map-marker-alt"></i>
-            <span>Canton, MA</span>
+            <span>Canton, MA — available remotely</span>
           </div>
           <div class="contact-item">
             <i class="fa fa-phone"></i>
@@ -225,6 +323,7 @@
 
   <script src="./scripts/headerpic.js" type="module"></script>
   <script src="./scripts/nav.js"></script>
+  <script src="./scripts/logo-scroll.js"></script>
 
 </body>
 </html>

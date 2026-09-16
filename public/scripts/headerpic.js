@@ -13,8 +13,8 @@ window.addEventListener("load", () => {
 
     // here we will handle which texture is visible and the timer to transition between images
     const slideshowState = {
-        activeTextureIndex: 1,
-        nextTextureIndex: 2, // does not care for now
+        activeTextureIndex: 2,
+        nextTextureIndex: 1, // does not care for now
         maxTextures: planeElements[0].querySelectorAll("img").length - 1, // -1 because displacement image does not count
 
         isChanging: false,
